@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <div className="pt-8 lg:pt-12 mx-auto max-w-xl  md:max-w-7xl">
+    <div className="pt-6 lg:pt-6 mx-auto max-w-xl  md:max-w-7xl">
       <nav className="rounded-2xl p-4 mx-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10">
         <div className="container mx-auto max-w-7xl flex items-center relative">
           {/* Logo on the left */}
