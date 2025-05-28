@@ -24,13 +24,18 @@ const Navbar = () => {
 
   return (
     <div className="pt-8 lg:pt-12 mx-auto max-w-7xl">
-      <nav className="rounded-2xl p-4 mx-4 text-white shadow-xl z-50 bg-white/10 backdrop-blur-md border border-white/20">
-        <div className="container mx-auto max-w-7xl flex justify-between items-center relative">
-          <a href="/">
-            <img src={Logo} alt="Logo" className="h-8" />
+      <nav className="rounded-2xl p-4 mx-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10">
+        <div className="container mx-auto max-w-7xl flex items-center relative">
+          {/* Logo on the left */}
+          <a href="/" className="mr-4">
+            <img src={Logo} alt="Logo" className="h-8 p-1" />
           </a>
 
-          <ul className="hidden md:flex space-x-6 text-sm font-medium">
+          {/* Spacer to push rest to the right */}
+          <div className="flex-1" />
+
+          {/* Nav links - shown on medium and above */}
+          <ul className="hidden md:flex space-x-8 text-md text-white">
             {navLinks.map((link) => (
               <li key={link} className="relative group">
                 <a
@@ -44,18 +49,20 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Contact button - desktop only */}
+          <div className="hidden md:flex items-center space-x-4 ml-6">
             <a
-              href="https://tidycal.com/hspuri26/30-minute-meeting"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-white text-black text-sm rounded-full hover:bg-gray-100 transition-colors"
+              className="px-6 py-4 bg-green-700 font-semibold text-white text-sm rounded-xl hover:bg-gray-100 transition-colors"
             >
               Contact Us
             </a>
           </div>
 
-          <div className="md:hidden flex items-center">
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center ml-4">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Menu"
@@ -71,13 +78,14 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Mobile menu dropdown */}
         {mobileMenuOpen && (
           <div
             id="mobile-menu"
             ref={menuRef}
             className="absolute top-full left-0 w-full md:hidden mt-6 px-4 z-50"
           >
-            <div className="w-full max-w-7xl mx-auto rounded-xl bg-white/10 backdrop-blur-md shadow-lg p-6 flex flex-col items-start space-y-4 text-white border border-white/20">
+            <div className="w-full max-w-7xl mx-auto rounded-xl bg-white/10 backdrop-blur-md shadow-lg p-6 flex flex-col gap-4 text-white border border-white/20">
               {navLinks.map((link) => (
                 <a
                   key={link}
@@ -89,12 +97,11 @@ const Navbar = () => {
                   <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
-
               <a
-                href="https://tidycal.com/hspuri26/30-minute-meeting"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-white text-black text-sm rounded-full hover:bg-gray-100 transition-colors"
+                className="px-4 py-2 bg-green-700 text-white text-sm rounded-xl hover:bg-green-600 transition-colors w-full text-center font-semibold"
               >
                 Contact Us
               </a>
