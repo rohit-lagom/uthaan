@@ -1,10 +1,11 @@
-import React from "react";
-import HeroBG from "../../assets/HeroBG.jpeg";
-import Location from "../../assets/Location.svg";
-import Rating1 from "../../assets/Rating1.jpeg";
-import Rating2 from "../../assets/Rating2.jpeg";
-import Rating3 from "../../assets/Rating3.jpeg";
 import Navbar from "../Navbar/Navbar";
+import {
+  HeroBG,
+  Location,
+  Rating1,
+  Rating2,
+  Rating3,
+} from "../../assets/assets";
 
 const Hero = () => {
   return (
