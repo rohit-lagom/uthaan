@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative min-h-screen w-full transition-colors duration-300"
+      className="relative lg:min-h-screen pb-24 w-full transition-colors duration-300"
     >
       {/* Background Image */}
       <img
@@ -28,7 +28,7 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between text-center md:text-left gap-14 pt-16 md:pt-0">
+      <div className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between text-center md:text-left lg:gap-14 md:gap-2 pt-16 md:pt-16">
         {/* Left Section */}
         <div className="w-full md:w-1/2 md:pr-16 space-y-12 text-white text-center md:text-left">
           {/* Ratings */}
@@ -37,17 +37,17 @@ const Hero = () => {
               <img
                 src={Rating1}
                 alt="User 1"
-                className="h-12 w-12 rounded-full border-2 border-white"
+                className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white"
               />
               <img
                 src={Rating2}
                 alt="User 2"
-                className="h-12 w-12 rounded-full border-2 border-white z-10"
+                className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white z-10"
               />
               <img
                 src={Rating3}
                 alt="User 3"
-                className="h-12 w-12 rounded-full border-2 border-white z-20"
+                className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white z-20"
               />
             </div>
             <div>

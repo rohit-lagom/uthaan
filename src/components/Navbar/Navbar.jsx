@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <div className="pt-8 lg:pt-12 mx-auto max-w-7xl">
+    <div className="pt-8 lg:pt-12 mx-auto max-w-xl  md:max-w-7xl">
       <nav className="rounded-2xl p-4 mx-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10">
         <div className="container mx-auto max-w-7xl flex items-center relative">
           {/* Logo on the left */}
@@ -83,9 +83,9 @@ const Navbar = () => {
           <div
             id="mobile-menu"
             ref={menuRef}
-            className="absolute top-full left-0 w-full md:hidden mt-6 px-4 z-50"
+            className="absolute top-full left-0 w-full md:hidden mt-6 z-50"
           >
-            <div className="w-full max-w-7xl mx-auto rounded-xl bg-white/10 backdrop-blur-md shadow-lg p-6 flex flex-col gap-4 text-white border border-white/20">
+            <div className="w-full max-w-7xl mx-auto rounded-xl bg-white backdrop-blur-3xl shadow-lg p-6 flex flex-col gap-4 text-gray-700 border border-white/20 z-30 text-center">
               {navLinks.map((link) => (
                 <a
                   key={link}
@@ -101,7 +101,7 @@ const Navbar = () => {
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-green-700 text-white text-sm rounded-xl hover:bg-green-600 transition-colors w-full text-center font-semibold"
+                className="px-6 py-4 bg-green-700 font-semibold text-white text-sm rounded-xl hover:bg-green-100 hover:text-black transition-colors duration-300 hover:border-green-700 hover:border-2"
               >
                 Contact Us
               </a>
