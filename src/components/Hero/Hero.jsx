@@ -30,76 +30,86 @@ const Hero = () => {
       {/* Content Container */}
       <div className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between text-center md:text-left lg:gap-14 md:gap-2 pt-16 md:pt-16">
         {/* Left Section */}
-        <div className="w-full md:w-1/2 md:pr-16 space-y-12 text-white text-center md:text-left">
-          {/* Ratings */}
-          <div className="flex justify-center md:justify-start gap-2 items-center">
-            <div className="flex -space-x-2">
-              <img
-                src={Rating1}
-                alt="User 1"
-                className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white"
-              />
-              <img
-                src={Rating2}
-                alt="User 2"
-                className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white z-10"
-              />
-              <img
-                src={Rating3}
-                alt="User 3"
-                className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white z-20"
-              />
-            </div>
-            <div>
-              <div>⭐⭐⭐⭐⭐</div>
-              <div className="text-white text-sm">From 2000+ ratings</div>
-            </div>
-          </div>
+    {/* Left Section */}
+<div className="w-full md:w-1/2 md:pr-16 text-white text-center md:text-left flex justify-center md:block">
+  <div className="space-y-12 max-w-xl w-full">
+    {/* Ratings */}
+    <div className="flex justify-center md:justify-start gap-2 items-center">
+      <div className="flex -space-x-2">
+        <img
+          src={Rating1}
+          alt="User 1"
+          className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white"
+        />
+        <img
+          src={Rating2}
+          alt="User 2"
+          className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white z-10"
+        />
+        <img
+          src={Rating3}
+          alt="User 3"
+          className="lg:h-12 lg:w-12 h-10 w-10 rounded-full border-2 border-white z-20"
+        />
+      </div>
+      <div>
+        <div>⭐⭐⭐⭐⭐</div>
+        <div className="text-white text-sm">From 2000+ ratings</div>
+      </div>
+    </div>
 
-          {/* Heading & Subtext */}
-          <h1 className="text-4xl font-semibold lg:text-5xl leading-tight">
-            Crafting gardens, cultivating dreams
-          </h1>
-          <p className="text-lg text-white/80">
-            With our expert team of gardeners and landscapers, we turn ordinary
-            gardens into extraordinary havens of beauty.
-          </p>
+    {/* Heading & Subtext */}
+    <h1 className="text-4xl font-semibold lg:text-5xl leading-tight">
+      Crafting gardens, cultivating dreams
+    </h1>
+    <p className="text-lg text-white/80">
+      With our expert team of gardeners and landscapers, we turn ordinary
+      gardens into extraordinary havens of beauty.
+    </p>
 
-          {/* Location Button */}
-          <button className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-md hover:shadow-lg transition border-t-4 border-green-700 hover:border-green-700 mx-auto md:mx-0">
-            <div className="bg-green-700 p-2 rounded-xl">
-              <img src={Location} alt="Location icon" className="h-6 w-6" />
-            </div>
-            <div className="text-left">
-              <div className="font-semibold pt-2">New York City</div>
-              <div className="text-sm text-gray-700 pb-2">
-                Brooklyn & Queens Area
-              </div>
-            </div>
-          </button>
+    {/* Location Button */}
+    <button className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-md hover:shadow-lg transition border-t-4 border-green-700 hover:border-green-700 mx-auto md:mx-0">
+      <div className="bg-green-700 p-2 rounded-xl">
+        <img src={Location} alt="Location icon" className="h-6 w-6" />
+      </div>
+      <div className="text-left">
+        <div className="font-semibold pt-2">New York City</div>
+        <div className="text-sm text-gray-700 pb-2">
+          Brooklyn & Queens Area
         </div>
+      </div>
+    </button>
+  </div>
+</div>
+
 
         {/* Right Section - Contact Form (Hidden on Mobile) */}
         <div className="w-full md:w-1/2 mt-10 md:mt-0 text-white hidden md:block">
           <form className="bg-[#DDDDDD] border-t-6 border-t-green-700 p-6 px-8 rounded-xl space-y-4">
-            <label className="block text-xl py-4 text-center font-semibold text-black">
+            <label className="block text-xl py-4 pb-6 text-center font-semibold text-black">
               Book a call with our experts
             </label>
 
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-4 py-3 rounded-md text-black bg-white"
+              required
+              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none focus:ring-0 focus:border-0
+"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-2 rounded-md text-black bg-white"
+              required
+              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none focus:ring-0 focus:border-0
+"
             />
-            <input
+            <textarea
               type="text"
               placeholder="How we can help?"
-              className="w-full px-4 py-2 pb-16 rounded-md text-black bg-white"
+              required
+              className="w-full px-4 py-4 pb-16 rounded-md text-black bg-white focus:outline-none focus:ring-0 focus:border-0
+"
             />
 
             <button
