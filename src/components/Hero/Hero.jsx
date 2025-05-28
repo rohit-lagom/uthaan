@@ -1,4 +1,14 @@
-<div
+import React from "react";
+import HeroBG from "../../assets/HeroBG.jpeg";
+import Location from "../../assets/Location.svg";
+import Rating1 from "../../assets/Rating1.jpeg";
+import Rating2 from "../../assets/Rating2.jpeg";
+import Rating3 from "../../assets/Rating3.jpeg";
+import Navbar from "../Navbar/Navbar";
+
+const Hero = () => {
+  return (
+   <div
   id="home"
   className="relative h-full pb-10 transition-colors duration-300"
 >
@@ -11,6 +21,9 @@
 
   {/* Overlay */}
   <div className="absolute inset-0 bg-black/60 z-10"></div>
+       <div className="relative z-30" >
+        <Navbar/>
+      </div>
 
   {/* Content */}
   <div className="relative z-20 max-w-7xl w-full pt-40 mx-auto px-6 pb-10 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between text-center md:text-left">
@@ -82,3 +95,8 @@
     </div>
   </div>
 </div>
+
+  );
+};
+
+export default Hero;
