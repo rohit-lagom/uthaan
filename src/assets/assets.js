@@ -13,6 +13,7 @@ import OurServices2 from "./OurServices2.jpeg";
 import OurServices3 from "./OurServices3.jpeg";
 import FAQYoutube from "./FAQYoutube.jpeg";
 import DownArrow from "./DownArrow.svg";
+import YTPlay from "./YTPlay.svg";
 
 export {
   Logo,
@@ -29,5 +30,6 @@ export {
   OurServices2,
   OurServices3,
   FAQYoutube,
-  DownArrow
+  DownArrow,
+  YTPlay,
 };
