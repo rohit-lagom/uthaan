@@ -8,6 +8,9 @@ import Location from "./Location.svg";
 import Rating1 from "./Rating1.jpeg";
 import Rating2 from "./Rating2.jpeg";
 import Rating3 from "./Rating3.jpeg";
+import OurServices1 from "./OurServices1.jpeg";
+import OurServices2 from "./OurServices2.jpeg";
+import OurServices3 from "./OurServices3.jpeg";
 
 export {
   Logo,
@@ -20,4 +23,7 @@ export {
   IntroSci,
   IntroPic,
   Quote,
+  OurServices1,
+  OurServices2,
+  OurServices3,
 };
