@@ -4,6 +4,7 @@ import Introduction from "./components/Introduction/Introduction";
 import InfoBanner from "./components/InfoBanner/InfoBanner";
 import OurServices from "./components/OurServices/OurServices";
 import FAQ from "./components/FAQ/FAQ";
+import RecentWorks from "./components/RecentWorks/RecentWorks";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <InfoBanner/>
       <OurServices/>
       <FAQ/>
+      <RecentWorks/>
     </div>
   );
 };

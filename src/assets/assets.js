@@ -14,6 +14,12 @@ import OurServices3 from "./OurServices3.jpeg";
 import FAQYoutube from "./FAQYoutube.jpeg";
 import DownArrow from "./DownArrow.svg";
 import YTPlay from "./YTPlay.svg";
+import Recent1 from "./Recent1.jpeg";
+import Recent2 from "./Recent2.jpeg";
+import Recent3 from "./Recent3.jpeg";
+import Recent4 from "./Recent4.jpeg";
+import Recent5 from "./Recent5.jpeg";
+import Recent6 from "./Recent6.jpeg";
 
 export {
   Logo,
@@ -32,4 +38,10 @@ export {
   FAQYoutube,
   DownArrow,
   YTPlay,
+  Recent1,
+  Recent2,
+  Recent3,
+  Recent4,
+  Recent5,
+  Recent6
 };
