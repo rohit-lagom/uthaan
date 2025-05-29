@@ -1,5 +1,5 @@
 import React from "react";
-import { IntroLeaf, IntroSci ,IntroPic,Quote} from "../../assets/assets";
+import { IntroLeaf, IntroSci, IntroPic, Quote } from "../../assets/assets";
 
 const Introduction = () => {
   return (
@@ -8,45 +8,64 @@ const Introduction = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left Side: Image */}
           <div className="w-full md:w-1/2 relative">
-            <img src={IntroPic} alt="Hero" className="object-center w-full h-96 rounded-xl shadow-lg bg-gray-100" />
-          
-          <div className="absolute bottom-5 flex bg-white p-4 mx-4 rounded-xl">
-            <div><img src={Quote} alt="" className=" h-12 w-12 bg-white "/></div>
-            <div>
-                <div>
-                    We take the time to understand your unique needs and preferences to ensure that your garden reflects your vision.
-                </div>
-                <div>
-                    Ricky Stokes, CEO
+            <img
+              src={IntroPic}
+              alt="Hero"
+              className="object-center w-full h-92 rounded-xl shadow-lg bg-gray-100"
+            />
 
-
+            <div className="absolute bottom-5 flex bg-white p-4 mx-4 rounded-xl">
+              <div>
+                <img src={Quote} alt="" className=" h-12 w-12 bg-white " />
+              </div>
+              <div className="px-2 text-sm md:text-base text-gray-60">
+                <div className="text-black font-semibold">
+                  We take the time to understand your unique needs and
+                  preferences to ensure that your garden reflects your vision.
                 </div>
+                <div className="text-gray-500">Ricky Stokes, CEO</div>
+              </div>
             </div>
-          </div>
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="w-full md:w-1/2 space-y-6 text-gray-800">
-            <h2 className="text-2xl md:text-3xl font-bold text-green-900">
+          <div className="w-full md:w-1/2 space-y-6 ">
+            <h2 className="text-2xl md:text-3xl font-semibold ">
               We believe in turning your outdoor space into your personal oasis
             </h2>
 
-            <p className="text-base md:text-lg">
-              Whether you have a sprawling backyard or a cozy balcony, our team of
-              experienced gardeners and landscapers is dedicated to bringing your
-              green dreams to life.
+            <p className="text-sm md:text-lg text-neutral-500">
+              Whether you have a sprawling backyard or a cozy balcony, our team
+              of experienced gardeners and landscapers is dedicated to bringing
+              your green dreams to life.
             </p>
 
             {/* Features */}
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <img src={IntroLeaf} alt="Sustainable Gardening" className="h-8 w-8" />
-                <span className="text-sm md:text-base font-medium">Sustainable gardening practices</span>
+                <div className="bg-green-700 rounded-lg ">
+                  <img
+                    src={IntroLeaf}
+                    alt="Sustainable Gardening"
+                    className="h-8 w-8 p-2"
+                  />
+                </div>
+                <span className="text-lg font-semibold">
+                  Sustainable gardening practices
+                </span>
               </div>
 
               <div className="flex items-center gap-4">
-                <img src={IntroSci} alt="Personalized Service" className="h-8 w-8" />
-                <span className="text-sm md:text-base font-medium">Personalized service for your needs</span>
+                <div className="bg-green-700 rounded-lg ">
+                  <img
+                    src={IntroSci}
+                    alt="Personalized Service"
+                    className="h-8 w-8 p-2"
+                  />
+                </div>
+                <span className="text-lg font-semibold">
+                  Personalized service for your needs
+                </span>
               </div>
             </div>
           </div>
