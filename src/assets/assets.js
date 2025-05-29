@@ -11,6 +11,8 @@ import Rating3 from "./Rating3.jpeg";
 import OurServices1 from "./OurServices1.jpeg";
 import OurServices2 from "./OurServices2.jpeg";
 import OurServices3 from "./OurServices3.jpeg";
+import FAQYoutube from "./FAQYoutube.jpeg";
+import DownArrow from "./DownArrow.svg";
 
 export {
   Logo,
@@ -26,4 +28,6 @@ export {
   OurServices1,
   OurServices2,
   OurServices3,
+  FAQYoutube,
+  DownArrow
 };
