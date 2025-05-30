@@ -24,6 +24,9 @@ import TestDavid from "./TestDavid.jpeg";
 import TestJohn from "./TestJohn.jpeg";
 import TestMichael from "./TestMichael.jpeg";
 import TestAlex from "./TestAlex.jpeg";
+import Blog1 from "./Blog1.jpeg";
+import Blog2 from "./Blog2.jpeg";
+import Blog3 from "./Blog3.jpeg";
 
 export {
   Logo,
@@ -52,4 +55,7 @@ export {
   TestJohn,
   TestMichael,
   TestAlex,
+  Blog1,
+  Blog2,
+  Blog3,
 };

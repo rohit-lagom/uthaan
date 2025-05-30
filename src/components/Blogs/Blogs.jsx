@@ -1,25 +1,25 @@
 import React from "react";
 import {
-  Recent1,
-  Recent2,
-  Recent3,
+  Blog1,
+  Blog2,
+  Blog3,
 } from "../../assets/assets";
 
 const blogPosts = [
   {
-    image: Recent1,
+    image: Blog1,
     title: "The Art of Designing Gardens: A Step-by-Step Guide",
     date: "Apr 8, 2022",
     description: "Learn how to design a beautiful garden layout with our detailed, easy-to-follow guide.",
   },
   {
-    image: Recent2,
+    image: Blog2,
     title: "Plant Spotlight: 10 Must-Have Perennials for Every Garden",
     date: "Mar 15, 2022",
     description: "Discover 10 essential perennial plants that will thrive in your garden all year long.",
   },
   {
-    image: Recent3,
+    image: Blog3,
     title: "Garden Pest Control: Useful Strategies for a Healthy Garden",
     date: "Feb 28, 2022",
     description: "Protect your garden naturally with these effective pest control strategies.",
