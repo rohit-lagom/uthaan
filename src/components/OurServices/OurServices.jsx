@@ -33,23 +33,20 @@ const OurServices = () => {
 
       <div className="flex flex-col md:flex-row gap-12">
         {services.map((service, index) => (
-          <div key={index} className="relative group w-full rounded-xl overflow-hidden">
+          <div key={index} className="relative cursor-pointer group w-full rounded-xl overflow-hidden">
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full lg:h-80 md:h-62 object-cover transition-transform duration-300 group-hover:scale-105"
             />
 
-            {/* Dark overlay for better text visibility */}
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-black/50" />
 
-            {/* Always visible title */}
-            <div className="absolute bottom-5 left-5 text-lg font-semibold text-white z-10">
+            <div className="absolute bottom-5 left-5 z-21 text-lg font-semibold text-white ">
               {service.title}
             </div>
 
-            {/* Hover description - visible only on lg+ */}
-            <div className="hidden lg:flex absolute inset-0 items-center justify-center text-center p-6 text-white text-sm font-light bg-black/20 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <div className="hidden lg:flex absolute inset-0 bg-black/50 justify-center text-center p-6 text-white text-sm font-light  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
               {service.description}
             </div>
           </div>
