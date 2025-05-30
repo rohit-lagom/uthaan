@@ -20,6 +20,10 @@ import Recent3 from "./Recent3.jpeg";
 import Recent4 from "./Recent4.jpeg";
 import Recent5 from "./Recent5.jpeg";
 import Recent6 from "./Recent6.jpeg";
+import TestDavid from "./TestDavid.jpeg";
+import TestJohn from "./TestJohn.jpeg";
+import TestMichael from "./TestMichael.jpeg";
+import TestAlex from "./TestAlex.jpeg";
 
 export {
   Logo,
@@ -43,5 +47,9 @@ export {
   Recent3,
   Recent4,
   Recent5,
-  Recent6
+  Recent6,
+  TestDavid,
+  TestJohn,
+  TestMichael,
+  TestAlex,
 };
