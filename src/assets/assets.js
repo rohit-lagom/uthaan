@@ -32,6 +32,7 @@ import Facebook from "./Facebook.svg";
 import Instagram from "./Instagram.svg";
 import Youtube from "./Youtube.svg";
 import Twitter from "./Twitter.svg";
+import InfoBannerBG from "./InfoBannerBG.jpeg";
 
 export {
   Logo,
@@ -67,5 +68,5 @@ export {
   Facebook,
   Instagram,
   Youtube,
-  Twitter,
+  Twitter,InfoBannerBG
 };
