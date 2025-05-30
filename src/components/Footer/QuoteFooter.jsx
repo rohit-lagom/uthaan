@@ -1,21 +1,18 @@
 import React from "react";
-import { Location, HeroBG } from "../../assets/assets";
 
 const QuoteFooter = () => {
   return (
     <div
       id="QuoteFooter"
-      className="relative w-full transition-colors duration-300 bg-green-700 py-16"
+      className="w-full bg-green-700 py-16 text-white transition-colors duration-300 lg:py-24"
     >
-      <div className=" relative max-w-7xl mx-auto px-6 mb-10  flex flex-col md:flex-row items-center justify-between gap-12 text-white">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-center md:text-left leading-snug">
+          Need gardening service?
+        </h2>
 
-
-        <div className="font-semibold text-2xl md:text-3xl text-center md:text-left">
-            Need gardening service?
- 
-        </div>
-        <button className="text-white border-1 border-white px-2 py-3 rounded-2xl shadow-md hover:shadow-lg transition bg-green-700 hover:bg-green-800 flex items-center gap-3">
-            Request a Quote
+        <button className="border border-white px-5 py-3 text-sm sm:text-base md:text-lg rounded-xl shadow-md hover:shadow-lg transition bg-green-700 hover:bg-green-800 flex items-center gap-2">
+          Request a Quote
         </button>
       </div>
     </div>
