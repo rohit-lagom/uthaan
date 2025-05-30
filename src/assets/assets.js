@@ -1,4 +1,5 @@
 import Logo from "./Logo-White.png";
+import LogoFooter from "./Logo.png";
 import IntroSci from "./Intro-Sci.svg";
 import IntroLeaf from "./Intro-Leaf.svg";
 import IntroPic from "./IntroPic.jpeg";
@@ -27,9 +28,14 @@ import TestAlex from "./TestAlex.jpeg";
 import Blog1 from "./Blog1.jpeg";
 import Blog2 from "./Blog2.jpeg";
 import Blog3 from "./Blog3.jpeg";
+import Facebook from "./Facebook.svg";
+import Instagram from "./Instagram.svg";
+import Youtube from "./Youtube.svg";
+import Twitter from "./Twitter.svg";
 
 export {
   Logo,
+  LogoFooter,
   HeroBG,
   Rating1,
   Rating2,
@@ -58,4 +64,8 @@ export {
   Blog1,
   Blog2,
   Blog3,
+  Facebook,
+  Instagram,
+  Youtube,
+  Twitter,
 };
