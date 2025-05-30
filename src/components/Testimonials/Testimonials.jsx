@@ -58,16 +58,16 @@ const Testimonials = () => {
       </div>
 
 
-      <div className="max-w-7xl mx-auto px-6 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 pb-16 overflow-hidden relative">
        
              <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 max-w-7xl mx-auto bg-gradient-to-r from-[#F7F7F7] to-transparent" />
 
-      <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-42 max-w-7xl mx-auto bg-gradient-to-l from-[#F7F7F7] to-transparent" />
+      <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 max-w-7xl mx-auto bg-gradient-to-l from-[#F7F7F7] to-transparent" />
         <div className="flex animate-[marquee_40s_linear_infinite] gap-6 w-max">
           {[...testimonials, ...testimonials].map((t, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-xl border-t-4 border-green-700 shadow-md w-80 flex-shrink-0"
+              className="bg-white p-8 rounded-xl border-t-4 border-1 border-green-700 shadow-md w-82 h-86 flex-shrink-0"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden">
@@ -79,11 +79,11 @@ const Testimonials = () => {
                 </div>
                 <div>
                   <div className="font-semibold">{t.name}</div>
-                  <div className="text-sm text-gray-500">{t.platform}</div>
+                  <div className=" text-gray-500">{t.platform}</div>
                 </div>
               </div>
-              <p className="text-gray-700 text-sm mb-3">{t.text}</p>
-              <div className="text-yellow-500 text-lg">
+              <p className="text-gray-700  pt-4">{t.text}</p>
+              <div className="text-yellow-500 pt-4">
                 {"⭐".repeat(t.rating)}
               </div>
             </div>
