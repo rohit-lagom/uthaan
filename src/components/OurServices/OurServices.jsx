@@ -24,7 +24,7 @@ const services = [
 
 const OurServices = () => {
   return (
-    <section className="relative z-20 max-w-7xl mx-auto px-6 py-16">
+    <section className="relative z-20 max-w-7xl mx-auto px-6 py-26">
       <h2 className="text-3xl font-semibold text-center">Our Services</h2>
       <p className="text-center py-8 pb-16 text-gray-600 max-w-2xl mx-auto">
         Our team combines expertise with creativity to transform outdoor spaces

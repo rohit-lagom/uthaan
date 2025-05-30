@@ -20,7 +20,7 @@ const faqs = [
 ];
 
 const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // First item open by default
+  const [activeIndex, setActiveIndex] = useState(0); 
   const contentRefs = useRef([]);
 
   const toggleFAQ = (index) => {
@@ -38,28 +38,24 @@ const FAQ = () => {
   return (
     <div className="bg-[#F7F7F7]">
 
-    <section className="relative z-20 max-w-7xl mx-auto px-6 py-16 " >
+    <section className="relative z-20 max-w-7xl mx-auto px-6 py-30 " >
       <div className="flex flex-col md:flex-row gap-12 items-start">
-        {/* Left: Image with group hover */}
         <div className="w-full md:w-1/2 flex justify-center relative group cursor-pointer rounded-xl overflow-hidden">
           <img
             src={FAQYoutube}
             alt="FAQ visual"
-            className="rounded-xl h-96 w-full object-cover transition-transform duration-300  group-hover:blur-sm group-hover:brightness-75"
+            className="rounded-xl h-93 w-full object-cover transition-transform duration-300  group-hover: group-hover:brightness-75 "
           />
-          {/* Overlay */}
           <div className="absolute inset-0 rounded-xl bg-black bg-opacity-10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-          {/* Play Button */}
           <div className="absolute inset-0 flex items-center justify-center">
             <img
               src={YTPlay}
               alt="Play icon"
-              className="h-20 w-20 transition-transform duration-300 group-hover:scale-110"
+              className="h-20 w-20 transition-transform duration-300 group-hover:scale-120"
             />
           </div>
         </div>
 
-        {/* Right: Accordion FAQs */}
         <div className="w-full md:w-1/2 space-y-4  ">
           {faqs.map((faq, index) => (
             <div
@@ -71,9 +67,9 @@ const FAQ = () => {
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-content-${index}`}
                 id={`faq-header-${index}`}
-                className="w-full cursor-pointer text-left p-5  font-medium flex justify-between items-center"
+                className="w-full cursor-pointer text-left p-6  font-medium flex justify-between items-center"
               >
-                <span className="text-lg text-neutral-800">{faq.question}</span>
+                <span className="text-xl text-neutral-800">{faq.question}</span>
                 <img
                   src={DownArrow}
                   alt="Toggle"
@@ -90,7 +86,7 @@ const FAQ = () => {
                 ref={(el) => (contentRefs.current[index] = el)}
                 className="overflow-hidden transition-all duration-500 max-h-0"
               >
-                <div className="px-5 pb-4 text-neutral-600">{faq.answer}</div>
+                <div className="px-6 pb-6 text-neutral-600">{faq.answer}</div>
               </div>
             </div>
           ))}
