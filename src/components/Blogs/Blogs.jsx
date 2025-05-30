@@ -28,7 +28,7 @@ const blogPosts = [
 
 const Blogs = () => {
   return (
-    <section className="relative z-20 max-w-7xl mx-auto px-6 py-16">
+    <section className="relative z-20 max-w-7xl mx-auto px-6 py-20">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-semibold">Explore our blog</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mt-4">

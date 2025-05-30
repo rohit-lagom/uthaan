@@ -7,6 +7,7 @@ import FAQ from "./components/FAQ/FAQ";
 import RecentWorks from "./components/RecentWorks/RecentWorks";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Blogs from "./components/Blogs/Blogs";
+import QuoteFooter from "./components/Footer/QuoteFooter";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <RecentWorks/>
       <Testimonials/>
       <Blogs/>
+      <QuoteFooter/>
     </div>
   );
 };
