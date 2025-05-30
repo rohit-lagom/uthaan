@@ -6,6 +6,7 @@ import OurServices from "./components/OurServices/OurServices";
 import FAQ from "./components/FAQ/FAQ";
 import RecentWorks from "./components/RecentWorks/RecentWorks";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Blogs from "./components/Blogs/Blogs";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <FAQ/>
       <RecentWorks/>
       <Testimonials/>
+      <Blogs/>
     </div>
   );
 };
