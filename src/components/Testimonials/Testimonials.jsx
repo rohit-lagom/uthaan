@@ -40,7 +40,10 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <div className="relative bg-[#F7F7F7] py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-10">
+
+      <div className=" relative max-w-7xl mx-auto px-6 mb-10">
+
+
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="text-4xl font-semibold leading-tight">
             Trusted by 1000+ <span className="block md:inline">customers</span>
@@ -54,12 +57,12 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Fade sides relative to container */}
-      <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 bg-gradient-to-r from-[#F7F7F7] to-transparent" />
-      <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 bg-gradient-to-l from-[#F7F7F7] to-transparent" />
 
-      {/* Marquee inside max-w-7xl */}
-      <div className="max-w-7xl mx-auto px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 overflow-hidden relative">
+       
+             <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 max-w-7xl mx-auto bg-gradient-to-r from-[#F7F7F7] to-transparent" />
+
+      <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-42 max-w-7xl mx-auto bg-gradient-to-l from-[#F7F7F7] to-transparent" />
         <div className="flex animate-[marquee_40s_linear_infinite] gap-6 w-max">
           {[...testimonials, ...testimonials].map((t, i) => (
             <div
