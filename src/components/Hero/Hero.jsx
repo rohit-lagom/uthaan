@@ -60,11 +60,10 @@ const Hero = () => {
 
             {/* Heading & Subtext */}
             <h1 className="text-4xl font-semibold lg:text-6xl md:text-4xl leading-tight">
-              Crafting gardens, cultivating dreams
+        Tokenising Trust for 29 Crore Farmers
             </h1>
             <p className="text-lg text-white/80">
-              With our expert team of gardeners and landscapers, we turn
-              ordinary gardens into extraordinary havens of beauty.
+            Farmily is revolutionizing how cooperative farming works—bridging gaps in finance, governance, traceability, and sustainability using blockchain and smart contracts.
             </p>
 
             {/* Location Button */}
