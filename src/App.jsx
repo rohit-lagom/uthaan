@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Blogs from "./components/Blogs/Blogs";
 import QuoteFooter from "./components/Footer/QuoteFooter";
 import Footer from "./components/Footer/Footer";
+import CTA from "./components/CTA/CTA";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <RecentWorks/>
       <Testimonials/>
       <Blogs/>
+      <CTA/>
       <QuoteFooter/>
       <Footer/>
     </div>
