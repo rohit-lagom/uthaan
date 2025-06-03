@@ -10,6 +10,7 @@ import Blogs from "./components/Blogs/Blogs";
 import QuoteFooter from "./components/Footer/QuoteFooter";
 import Footer from "./components/Footer/Footer";
 import CTA from "./components/CTA/CTA";
+import Platform from "./components/Platform/Platform";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Introduction/>
       <InfoBanner/>
       <OurServices/>
+      <Platform/>
       <FAQ/>
       <RecentWorks/>
       <Testimonials/>
