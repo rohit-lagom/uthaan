@@ -27,7 +27,7 @@ const App = () => {
       <Testimonials/>
       <Blogs/>
       <CTA/>
-      <QuoteFooter/>
+      {/* <QuoteFooter/> */}
       <Footer/>
     </div>
   );
