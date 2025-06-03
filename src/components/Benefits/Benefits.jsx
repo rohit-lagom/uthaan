@@ -35,7 +35,7 @@ const Benefits = () => {
 
   const beneficiaries = [
     {
-      icon: <HiOutlineUsers className="w-12 h-12 text-pink-500" />,
+      icon: <HiOutlineUsers className="w-12 h-12 text-green-700" />,
       title: 'For Cooperatives',
       benefits: [
         'Transparent records with immutable history',
@@ -55,7 +55,7 @@ const Benefits = () => {
       ],
     },
     {
-      icon: <HiOutlineCash className="w-12 h-12 text-indigo-600" />,
+      icon: <HiOutlineCash className="w-12 h-12 text-green-700" />,
       title: 'For Banks & NBFCs',
       benefits: [
         'Verified data for credit assessment',
@@ -65,7 +65,7 @@ const Benefits = () => {
       ],
     },
     {
-      icon: <HiOutlineGlobe className="w-12 h-12 text-blue-700" />,
+      icon: <HiOutlineGlobe className="w-12 h-12 text-green-700" />,
       title: 'For Agri Exporters & Brands',
       benefits: [
         'Farm-to-fork traceability for premium markets',
@@ -80,21 +80,21 @@ const Benefits = () => {
     <section
       id="benefits"
       ref={ref}
-      className="py-16 md:py-24 bg-white scroll-smooth"
+      className="py-16 md:py-24 bg-white scroll-mt-20"
     >
-      <div className="px-4 md:px-6 mx-auto max-w-7xl">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-neutral-900 mb-4 md:mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-neutral-900 mb-4">
             Built for Everyone in the Agri Ecosystem
           </h2>
-          <p className="text-xl text-neutral-600 mb-8 md:mb-12 max-w-3xl mx-auto">
-            Our platform creates value for all stakeholders in the agricultural
-            value chain, from farmers to financial institutions and beyond.
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            Our platform creates value for all stakeholders in the agricultural value chain,
+            from farmers to financial institutions and beyond.
           </p>
         </motion.div>
 
@@ -108,7 +108,7 @@ const Benefits = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-pink-300"
+              className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-green-300"
             >
               <div className="flex flex-col h-full">
                 <div className="mb-6 flex items-center">
@@ -122,7 +122,7 @@ const Benefits = () => {
                   {beneficiary.benefits.map((benefit, i) => (
                     <li key={i} className="flex items-start">
                       <svg
-                        className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
