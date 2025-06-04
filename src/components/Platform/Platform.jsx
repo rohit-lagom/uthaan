@@ -94,7 +94,7 @@ const Platform = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white/10 backdrop-blur-xl border border-green-500/40 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl"
+              className="bg-white/10 backdrop-blur-xl border border-green-500/20 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl"
             >
               <div className="bg-green-50 p-4 rounded-full mb-6 shadow-sm">
                 {module.icon}
