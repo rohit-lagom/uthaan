@@ -48,14 +48,14 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left lg:gap-14 pt-16"
+        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         {/* Left Section */}
         <motion.div
-          className="w-full md:w-1/2 md:pr-16 text-white flex justify-center md:block mt-2"
+          className="w-full md:w-1/2 md:pr-10 lg:pr-16 text-white mt-10 md:mt-0"
           variants={fadeInUp}
         >
           <div className="space-y-8 max-w-xl w-full">
@@ -85,13 +85,13 @@ const Hero = () => {
             </div>
 
             {/* Heading & Subtext */}
-            <h1 className="text-4xl font-semibold lg:text-5xl leading-tight">
+            <h1 className="text-4xl font-semibold lg:text-5xl leading-tight text-center md:text-left">
               Tokenising Trust{" "}
               <span className="font-bold block">
                 for 29 Crore Farmers
               </span>
             </h1>
-            <p className="text-lg text-white/80">
+            <p className="text-lg text-white/80 text-center md:text-left">
               Farmily is revolutionizing how cooperative farming works—bridging
               gaps in finance, governance, traceability, and sustainability
               using blockchain and smart contracts.
@@ -118,11 +118,11 @@ const Hero = () => {
 
         {/* Right Section (Form) */}
         <motion.div
-          className="w-full md:w-1/2 md:flex flex-col items-end mt-10 md:mt-0 text-white hidden"
+          className="hidden md:flex w-full md:w-1/2 lg:pl-16"
           variants={fadeInUp}
           transition={{ delay: 0.4 }}
         >
-          <form className="bg-[#DDDDDD] lg:h-130 lg:w-112 h-full w-full border-t-6 border-t-green-700 p-6 px-8 rounded-xl space-y-4">
+          <form className="bg-[#DDDDDD] lg:h-130 lg:w-112 w-full border-t-6 border-t-green-700 p-6 px-8 rounded-xl space-y-4">
             <label className="block text-xl py-4 pb-6 text-center font-semibold text-black">
               Book a call with our experts
             </label>
