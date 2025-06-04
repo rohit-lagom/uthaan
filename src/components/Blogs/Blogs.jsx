@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { Blog1, Blog2, Blog3 } from "../../assets/assets";
 
 const blogPosts = [
@@ -25,22 +27,42 @@ const blogPosts = [
   },
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
 const Blogs = () => {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <section className="relative z-20 max-w-7xl mx-auto px-6 py-20">
-      <div className="text-center mb-12">
+    <section ref={ref} className="relative z-20 max-w-7xl mx-auto px-6 py-20">
+      <motion.div
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={fadeInUp}
+        className="text-center mb-12"
+      >
         <h2 className="text-3xl font-semibold">Stay Ahead of the Curve</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mt-4">
           Explore our latest insights on blockchain agriculture, carbon farming,
-          and the future of rural finance.{" "}
+          and the future of rural finance.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {blogPosts.map((post, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="bg-white rounded-lg overflow-hidden transition-transform hover:scale-105 duration-300"
+            className="bg-white rounded-xl overflow-hidden transition-transform hover:scale-105 duration-300 shadow-sm"
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            custom={idx + 1}
+            variants={fadeInUp}
           >
             <div className="aspect-[4/3] w-full">
               <img
@@ -49,11 +71,12 @@ const Blogs = () => {
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
-            <div className="">
-              <div className="text-sm py-2 text-gray-500 mb-1">{post.date}</div>
+            <div className="p-4">
+              <div className="text-sm text-gray-500 mb-1">{post.date}</div>
               <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
+              <p className="text-sm text-gray-600">{post.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
