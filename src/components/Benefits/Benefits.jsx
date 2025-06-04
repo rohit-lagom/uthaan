@@ -93,7 +93,7 @@ const Benefits = () => {
       />
 
       {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div> */}
+      <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
 
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6">
