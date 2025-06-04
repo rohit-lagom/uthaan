@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+// import HeroBG from './bermuda-diamond.svg';
+// import HeroBG from './rose-petals.svg';
+import HeroBG from './dragon-scales.svg';
 import {
   HiOutlineUsers,
   HiOutlineOfficeBuilding,
@@ -35,7 +38,7 @@ const Benefits = () => {
 
   const beneficiaries = [
     {
-      icon: <HiOutlineUsers className="w-12 h-12 text-green-700" />,
+      icon: <HiOutlineUsers className="w-8 h-8 text-green-700" />,
       title: 'For Cooperatives',
       benefits: [
         'Transparent records with immutable history',
@@ -45,7 +48,7 @@ const Benefits = () => {
       ],
     },
     {
-      icon: <HiOutlineOfficeBuilding className="w-12 h-12 text-green-700" />,
+      icon: <HiOutlineOfficeBuilding className="w-8 h-8 text-green-700" />,
       title: 'For Corporates & CSR',
       benefits: [
         'Traceable impact with verification at every step',
@@ -55,7 +58,7 @@ const Benefits = () => {
       ],
     },
     {
-      icon: <HiOutlineCash className="w-12 h-12 text-green-700" />,
+      icon: <HiOutlineCash className="w-8 h-8 text-green-700" />,
       title: 'For Banks & NBFCs',
       benefits: [
         'Verified data for credit assessment',
@@ -65,7 +68,7 @@ const Benefits = () => {
       ],
     },
     {
-      icon: <HiOutlineGlobe className="w-12 h-12 text-green-700" />,
+      icon: <HiOutlineGlobe className="w-8 h-8 text-green-700" />,
       title: 'For Agri Exporters & Brands',
       benefits: [
         'Farm-to-fork traceability for premium markets',
@@ -80,19 +83,30 @@ const Benefits = () => {
     <section
       id="benefits"
       ref={ref}
-      className="py-16 md:py-24 bg-white scroll-mt-20"
+      className="relative py-16 md:py-24 bg-white scroll-mt-20 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      {/* Background image */}
+      <img
+        src={HeroBG}
+        alt="Decorative background"
+        className="absolute inset-0 w-full h-full object-cover opacity-100 z-0 pointer-events-none"
+      />
+
+      {/* Overlay */}
+      {/* <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div> */}
+
+      {/* Content */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-neutral-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
             Built for Everyone in the Agri Ecosystem
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Our platform creates value for all stakeholders in the agricultural value chain,
             from farmers to financial institutions and beyond.
           </p>
@@ -108,21 +122,23 @@ const Benefits = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-green-300"
+              className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/30 shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
             >
               <div className="flex flex-col h-full">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4">{beneficiary.icon}</div>
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <div className="w-14 h-14 mr-4 flex items-center justify-center rounded-full bg-white/40 backdrop-blur-sm border border-white/30">
+                    {beneficiary.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">
                     {beneficiary.title}
                   </h3>
                 </div>
 
-                <ul className="space-y-3 text-neutral-700 flex-grow">
+                <ul className="space-y-3 text-white/90 flex-grow">
                   {beneficiary.benefits.map((benefit, i) => (
                     <li key={i} className="flex items-start">
                       <svg
-                        className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-green-400 mr-2 flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

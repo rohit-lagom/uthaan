@@ -59,8 +59,10 @@ const Hero = () => {
             </div>
 
             {/* Heading & Subtext */}
-            <h1 className="text-4xl font-semibold lg:text-6xl md:text-4xl leading-tight">
-        Tokenising Trust for 29 Crore Farmers
+            <h1 className="text-4xl font-semibold lg:text-5xl md:text-4xl leading-tight">
+        Tokenising Trust <span className="font-bold block">
+          for 29 Crore Farmers
+          </span>
             </h1>
             <p className="text-lg text-white/80">
             Farmily is revolutionizing how cooperative farming works—bridging gaps in finance, governance, traceability, and sustainability using blockchain and smart contracts.
