@@ -21,7 +21,7 @@ const Introduction = () => {
   return (
     <div
       ref={ref}
-      className="py-20 px-4 md:px-8 lg:px-16"
+      className="py-20 px-4 md:px-8 lg:px-16 bg-[#F7F7F7]"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div

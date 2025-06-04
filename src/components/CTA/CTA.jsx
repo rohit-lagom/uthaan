@@ -11,7 +11,7 @@ const CTA = () => {
   return (
     <section
       ref={ref}
-      className="py-20 bg-gradient-to-r from-green-800 to-green-600 text-white scroll-mt-20 relative overflow-hidden"
+      className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white scroll-mt-20 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-6">
         <motion.div

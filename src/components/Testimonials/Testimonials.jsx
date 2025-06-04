@@ -59,47 +59,49 @@ const Testimonials = () => {
   });
 
   return (
-    <div className="relative bg-[#F7F7F7] pt-30 pb-16 overflow-hidden" ref={ref}>
+    <div
+      className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-24 overflow-hidden"
+      ref={ref}
+    >
       <motion.div
-        className="relative max-w-7xl mx-auto px-6 mb-10"
+        className="relative max-w-7xl mx-auto px-6 mb-12"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         custom={0}
       >
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div className="text-4xl font-semibold leading-tight">
+          <div className="text-4xl font-semibold leading-tight text-white">
             Trusted by 1000+{" "}
             <span className="block md:inline">customers</span>
           </div>
           <div>
-            <div className="text-4xl font-bold">
-              4.9{" "}
-              <span className="text-sm align-middle">⭐⭐⭐⭐⭐</span>
+            <div className="text-4xl font-bold text-white">
+              4.9 <span className="text-sm align-middle">⭐⭐⭐⭐⭐</span>
             </div>
-            <div className="text-gray-600">From 2000+ reviews</div>
+            <div className="text-white/80">From 2000+ reviews</div>
           </div>
         </div>
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative overflow-hidden group">
         {/* Edge fade overlays */}
-        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 bg-gradient-to-r from-[#F7F7F7] to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 bg-gradient-to-l from-[#F7F7F7] to-transparent" />
+        {/* <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 bg-gradient-to-r from-green-600 to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-16 bg-gradient-to-l from-green-700 to-transparent" /> */}
 
         {/* Marquee container */}
         <div className="flex gap-6 py-5 my-5 w-max [animation:marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div
-              key={i}
-              className="bg-white p-8 rounded-xl border-t-4 border-green-700 shadow-md w-82 h-86 flex-shrink-0 transform transition duration-300 hover:scale-105"
+              key={i}      
+              className="bg-white/10 text-white p-8 rounded-xl border border-white/20 backdrop-blur-lg shadow-lg w-80 h-auto flex-shrink-0 transform transition duration-300 hover:scale-105"
               variants={fadeInUp}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               custom={i % testimonials.length + 1}
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden">
+                <div className="w-14 h-14 rounded-full overflow-hidden border border-white/30">
                   <img
                     src={t.image}
                     alt={t.name}
@@ -107,12 +109,12 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-gray-500">{t.platform}</div>
+                  <div className="font-semibold text-white">{t.name}</div>
+                  <div className="text-white/80 text-sm">{t.platform}</div>
                 </div>
               </div>
-              <p className="text-gray-700 pt-4">{t.text}</p>
-              <div className="text-yellow-500 pt-4">
+              <p className="text-white/90 pt-4">{t.text}</p>
+              <div className="text-yellow-300 pt-4">
                 {"⭐".repeat(t.rating)}
               </div>
             </motion.div>

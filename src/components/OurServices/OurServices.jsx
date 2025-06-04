@@ -43,7 +43,7 @@ const OurServices = () => {
   return (
     <section
       ref={ref}
-      className="relative z-20 max-w-7xl mx-auto px-6 py-26"
+      className="relative z-20 max-w-7xl mx-auto px-6 py-26  bg-[#F7F7F7]"
     >
       {/* Heading */}
       <motion.h2

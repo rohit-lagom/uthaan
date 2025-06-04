@@ -59,7 +59,7 @@ const socialIcons = [
 const Footer = () => {
   return (
     <footer className="w-full bg-gradient-to-tr from-white to-[#f5fdf5] text-gray-800 pt-24 pb-16 px-6 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto lg:px-6">
         <div className="bg-white/60 backdrop-blur-sm border border-gray-200 shadow-md rounded-3xl p-10 flex flex-col md:flex-row justify-between gap-12 transition-all duration-300">
 
           {/* Logo and Description */}
