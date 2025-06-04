@@ -1,22 +1,53 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { IntroLeaf, IntroSci, IntroPic, Quote } from "../../assets/assets";
 
 const Introduction = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="py-20 px-4 md:px-8 lg:px-16">
+    <div
+      ref={ref}
+      className="py-20 px-4 md:px-8 lg:px-16"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        <motion.div
+          className="flex flex-col md:flex-row items-center justify-between gap-12"
+          variants={fadeInUp}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
           {/* Left Side: Image */}
-          <div className="w-full md:w-1/2 relative">
+          <motion.div
+            className="w-full md:w-1/2 relative"
+            variants={fadeInUp}
+          >
             <img
               src={IntroPic}
               alt="Hero"
               className="object-center w-full h-92 rounded-xl shadow-lg bg-gray-100"
             />
 
-            <div className="absolute bottom-5 flex bg-white p-4 mx-4 rounded-xl">
+            <motion.div
+              className="absolute bottom-5 flex bg-white p-4 mx-4 rounded-xl shadow-md"
+              variants={fadeInUp}
+              transition={{ delay: 0.2 }}
+            >
               <div>
-                <img src={Quote} alt="" className=" h-12 w-12 bg-white " />
+                <img src={Quote} alt="" className="h-12 w-12 bg-white" />
               </div>
               <div className="px-2 text-sm md:text-base text-gray-60">
                 <div className="text-black font-semibold">
@@ -25,12 +56,16 @@ const Introduction = () => {
                 </div>
                 <div className="text-gray-500">Ricky Stokes, CEO</div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Side: Text Content */}
-          <div className="w-full md:w-1/2 space-y-6 ">
-            <h2 className="text-2xl md:text-3xl font-semibold ">
+          <motion.div
+            className="w-full md:w-1/2 space-y-6"
+            variants={fadeInUp}
+            transition={{ delay: 0.3 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-semibold">
               We believe in turning your outdoor space into your personal oasis
             </h2>
 
@@ -42,8 +77,12 @@ const Introduction = () => {
 
             {/* Features */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="bg-green-700 rounded-lg ">
+              <motion.div
+                className="flex items-center gap-4"
+                variants={fadeInUp}
+                transition={{ delay: 0.4 }}
+              >
+                <div className="bg-green-700 rounded-lg">
                   <img
                     src={IntroLeaf}
                     alt="Sustainable Gardening"
@@ -53,10 +92,14 @@ const Introduction = () => {
                 <span className="text-lg font-semibold">
                   Sustainable gardening practices
                 </span>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center gap-4">
-                <div className="bg-green-700 rounded-lg ">
+              <motion.div
+                className="flex items-center gap-4"
+                variants={fadeInUp}
+                transition={{ delay: 0.5 }}
+              >
+                <div className="bg-green-700 rounded-lg">
                   <img
                     src={IntroSci}
                     alt="Personalized Service"
@@ -66,10 +109,10 @@ const Introduction = () => {
                 <span className="text-lg font-semibold">
                   Personalized service for your needs
                 </span>
-              </div>
+              </motion.div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
