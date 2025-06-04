@@ -7,19 +7,20 @@ const faqs = [
   {
     question: "Do you offer maintenance services?",
     answer:
-      "Yes, we provide comprehensive landscape maintenance services to keep your garden looking its best year-round. We offer tailored maintenance plans to suit your schedule and budget.",
+      "Yes, Farmily provides comprehensive landscape maintenance services to keep your garden looking its best year-round. We offer tailored maintenance plans to suit your schedule and budget.",
   },
   {
     question: "Do you use organic gardening methods?",
     answer:
-      "We prioritize sustainable practices and use organic fertilizers and herbicides when possible. We believe in promoting the health and vitality of your garden while minimizing environmental impact.",
+      "At Farmily, we prioritize sustainable practices and use organic fertilizers and herbicides whenever possible. We believe in promoting the health and vitality of your garden while minimizing environmental impact.",
   },
   {
     question: "Are your gardeners licensed and insured?",
     answer:
-      "Yes, we are fully licensed and insured for your peace of mind. Our team consists of experienced professionals who are committed to delivering high-quality workmanship and exceptional service.",
+      "Absolutely. Farmily is fully licensed and insured for your peace of mind. Our team consists of experienced professionals committed to delivering high-quality workmanship and exceptional service.",
   },
 ];
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
