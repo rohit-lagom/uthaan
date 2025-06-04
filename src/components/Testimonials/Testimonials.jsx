@@ -39,8 +39,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="relative bg-[#F7F7F7] py-30 overflow-hidden">
-      <div className=" relative max-w-7xl mx-auto px-6 mb-10">
+    <div className="relative bg-[#F7F7F7] pt-30 pb-16 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-6 mb-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="text-4xl font-semibold leading-tight">
             Trusted by 1000+ <span className="block md:inline">customers</span>
@@ -54,15 +54,17 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6  overflow-hidden relative">
-        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 max-w-7xl mx-auto bg-gradient-to-r from-[#F7F7F7] to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 max-w-7xl mx-auto bg-gradient-to-l from-[#F7F7F7] to-transparent" />
+      <div className="max-w-7xl mx-auto px-6 relative overflow-hidden group">
+        {/* Edge fading */}
+        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 bg-gradient-to-r from-[#F7F7F7] to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 bg-gradient-to-l from-[#F7F7F7] to-transparent" />
 
-        <div className="flex animate-[marquee_40s_linear_infinite] gap-6 w-max">
+        {/* Scrolling container with hover pause */}
+        <div className="flex gap-6 py-5 my-5 w-max [animation:marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...testimonials, ...testimonials].map((t, i) => (
             <div
               key={i}
-              className="bg-white p-8 rounded-xl border-t-4 border-1 border-green-700 shadow-md w-82 h-86 flex-shrink-0"
+              className="bg-white p-8 rounded-xl border-t-4 border-1 border-green-700 shadow-md w-82 h-86 flex-shrink-0 transform transition duration-300 hover:scale-105"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden">
@@ -77,7 +79,7 @@ const Testimonials = () => {
                   <div className=" text-gray-500">{t.platform}</div>
                 </div>
               </div>
-              <p className="text-gray-700  pt-4">{t.text}</p>
+              <p className="text-gray-700 pt-4">{t.text}</p>
               <div className="text-yellow-500 pt-4">
                 {"⭐".repeat(t.rating)}
               </div>
