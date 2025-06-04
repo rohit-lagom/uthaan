@@ -70,35 +70,41 @@ const Testimonials = () => {
         animate={inView ? "visible" : "hidden"}
         custom={0}
       >
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        {/* Mobile Layout - Centered */}
+        <div className="flex flex-col items-center text-center md:hidden">
+          <h2 className="text-3xl font-bold mb-2">
+            Trusted by 1000+ <span className="block">customers</span>
+          </h2>
+          <div className="text-2xl font-semibold">
+            4.9 <span className="text-sm align-middle">⭐⭐⭐⭐⭐</span>
+          </div>
+          <p className="text-white/80 mt-1">From 2000+ reviews</p>
+        </div>
+
+        {/* Desktop Layout - Left Aligned */}
+        <div className="hidden md:flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="text-4xl font-semibold leading-tight text-white">
-            Trusted by 1000+{" "}
-            <span className="block md:inline">customers</span>
+            Trusted by 1000+ <span className="block ">customers</span>
           </div>
           <div>
             <div className="text-4xl font-bold text-white">
-              4.9 <span className="text-sm align-middle">⭐⭐⭐⭐⭐</span>
+              4.9 <span className="text-xl align-middle">⭐⭐⭐⭐⭐</span>
             </div>
-            <div className="text-white/80">From 2000+ reviews</div>
+            <div className="text-white/80 text-3xl ">From 2000+ reviews</div>
           </div>
         </div>
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative overflow-hidden group">
-        {/* Edge fade overlays */}
-        {/* <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 bg-gradient-to-r from-green-600 to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-16 bg-gradient-to-l from-green-700 to-transparent" /> */}
-
-        {/* Marquee container */}
         <div className="flex gap-6 py-5 my-5 w-max [animation:marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div
-              key={i}      
-              className="bg-white/10 text-white p-8 rounded-xl border border-white/20 backdrop-blur-lg shadow-lg w-80 h-auto flex-shrink-0 transform transition duration-300 hover:scale-105"
+              key={i}
+              className="bg-white/10 text-white p-6 sm:p-8 rounded-xl border border-white/20 backdrop-blur-lg shadow-lg w-64 sm:w-72 md:w-80 h-auto flex-shrink-0 transform transition duration-300 hover:scale-105"
               variants={fadeInUp}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              custom={i % testimonials.length + 1}
+              custom={(i % testimonials.length) + 1}
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden border border-white/30">
