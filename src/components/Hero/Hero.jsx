@@ -1,3 +1,6 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Navbar from "../Navbar/Navbar";
 import {
   HeroBG,
@@ -8,10 +11,25 @@ import {
 } from "../../assets/assets";
 
 const Hero = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
   return (
     <div
       id="home"
       className="relative lg:min-h-screen pb-24 w-full transition-colors duration-300"
+      ref={ref}
     >
       {/* Background Image */}
       <img
@@ -28,10 +46,18 @@ const Hero = () => {
         <Navbar />
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between text-center md:text-left lg:gap-14 md:gap-2 pt-16 md:pt-30">
+      {/* Content */}
+      <motion.div
+        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left lg:gap-14 pt-16"
+        variants={fadeInUp}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
         {/* Left Section */}
-        <div className="w-full md:w-1/2 md:pr-16 text-white text-center md:text-left flex justify-center md:block mt-2">
+        <motion.div
+          className="w-full md:w-1/2 md:pr-16 text-white flex justify-center md:block mt-2"
+          variants={fadeInUp}
+        >
           <div className="space-y-8 max-w-xl w-full">
             {/* Ratings */}
             <div className="flex justify-center md:justify-start gap-2 items-center">
@@ -59,17 +85,24 @@ const Hero = () => {
             </div>
 
             {/* Heading & Subtext */}
-            <h1 className="text-4xl font-semibold lg:text-5xl md:text-4xl leading-tight">
-        Tokenising Trust <span className="font-bold block">
-          for 29 Crore Farmers
-          </span>
+            <h1 className="text-4xl font-semibold lg:text-5xl leading-tight">
+              Tokenising Trust{" "}
+              <span className="font-bold block">
+                for 29 Crore Farmers
+              </span>
             </h1>
             <p className="text-lg text-white/80">
-            Farmily is revolutionizing how cooperative farming works—bridging gaps in finance, governance, traceability, and sustainability using blockchain and smart contracts.
+              Farmily is revolutionizing how cooperative farming works—bridging
+              gaps in finance, governance, traceability, and sustainability
+              using blockchain and smart contracts.
             </p>
 
             {/* Location Button */}
-            <button className="flex items-center gap-3 mt-16 bg-white text-black px-5 py-3 rounded-2xl shadow-md hover:shadow-lg transition border-t-4 border-green-700 hover:border-green-700 mx-auto md:mx-0">
+            <motion.button
+              className="flex items-center gap-3 mt-16 bg-white text-black px-5 py-3 rounded-2xl shadow-md hover:shadow-lg transition border-t-4 border-green-700 hover:border-green-700 mx-auto md:mx-0"
+              variants={fadeInUp}
+              transition={{ delay: 0.3 }}
+            >
               <div className="bg-green-700 p-2 rounded-xl">
                 <img src={Location} alt="Location icon" className="h-6 w-6" />
               </div>
@@ -79,12 +112,16 @@ const Hero = () => {
                   Brooklyn & Queens Area
                 </div>
               </div>
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Section - Contact Form (Hidden on Mobile) */}
-        <div className="w-full md:w-1/2 md:flex flex-col items-end  mt-10 md:mt-0 text-white hidden ">
+        {/* Right Section (Form) */}
+        <motion.div
+          className="w-full md:w-1/2 md:flex flex-col items-end mt-10 md:mt-0 text-white hidden"
+          variants={fadeInUp}
+          transition={{ delay: 0.4 }}
+        >
           <form className="bg-[#DDDDDD] lg:h-130 lg:w-112 h-full w-full border-t-6 border-t-green-700 p-6 px-8 rounded-xl space-y-4">
             <label className="block text-xl py-4 pb-6 text-center font-semibold text-black">
               Book a call with our experts
@@ -94,33 +131,29 @@ const Hero = () => {
               type="text"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none focus:ring-0 focus:border-0
-"
+              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none"
             />
             <input
               type="email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none focus:ring-0 focus:border-0
-"
+              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none"
             />
             <textarea
-              type="text"
               placeholder="How we can help?"
               required
-              className="w-full px-4 py-4 pb-16 rounded-md text-black bg-white focus:outline-none focus:ring-0 focus:border-0
-"
+              className="w-full px-4 py-4 pb-16 rounded-md text-black bg-white focus:outline-none"
             />
 
             <button
               type="submit"
-              className="w-full bg-green-700 hover:bg-green-800 cursor-pointer text-white px-6 py-3 mb-3 rounded-md transition font-semibold"
+              className="w-full bg-green-700 hover:bg-green-800 text-white px-6 py-3 mb-3 rounded-md transition font-semibold"
             >
               Request a call
             </button>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
