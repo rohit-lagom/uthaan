@@ -11,10 +11,15 @@ const CTA = () => {
   return (
     <section
       ref={ref}
-      className="py-20 bg-gradient-to-r from-green-700 to-green-800 text-white scroll-mt-20"
+      className="py-20 bg-gradient-to-r from-green-800 to-green-600 text-white scroll-mt-20 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="max-w-7xl mx-auto text-center backdrop-blur-lg bg-white/10 rounded-2xl border border-white/20 shadow-xl px-8 py-14"
+        >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -30,7 +35,7 @@ const CTA = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl mb-10 text-white/90"
           >
-            Let our team show you how Farmily can unlock transparency, capital, and trust for your organization.
+            Let our team show you how <strong>Farmily</strong> can unlock transparency, capital, and trust for your organization.
           </motion.p>
 
           <motion.div
@@ -39,20 +44,27 @@ const CTA = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-4"
           >
+            {/* Glassmorphic Button */}
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 bg-white text-green-700 hover:bg-neutral-100 shadow-md"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-200 
+              bg-white/10 text-white border border-white/30 backdrop-blur-md 
+              hover:bg-white/20 hover:shadow-lg"
             >
               Request a Demo
             </a>
+
+            {/* Secondary Glassmorphic Button */}
             <a
               href="#"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 border-2 border-white text-white hover:bg-white/10"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-200 
+              bg-white/5 text-white border border-white/30 backdrop-blur-md 
+              hover:bg-white/10 hover:shadow-lg"
             >
               Download Brochure
             </a>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
