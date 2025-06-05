@@ -87,9 +87,7 @@ const Hero = () => {
             {/* Heading & Subtext */}
             <h1 className="text-4xl font-semibold lg:text-5xl leading-tight text-center md:text-left">
               Tokenising Trust{" "}
-              <span className="font-bold block">
-                for 29 Crore Farmers
-              </span>
+              <span className="font-bold block">for 29 Crore Farmers</span>
             </h1>
             <p className="text-lg text-white/80 text-center md:text-left">
               Farmily is revolutionizing how cooperative farming works—bridging
@@ -116,14 +114,14 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Section (Form) */}
+        {/* Right Section (Glassmorphism Form) */}
         <motion.div
           className="hidden md:flex w-full md:w-1/2 lg:pl-16"
           variants={fadeInUp}
           transition={{ delay: 0.4 }}
         >
-          <form className="bg-[#DDDDDD] lg:h-130 lg:w-112 w-full border-t-6 border-t-green-700 p-6 px-8 rounded-xl space-y-4">
-            <label className="block text-xl py-4 pb-6 text-center font-semibold text-black">
+          <form className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-xl text-white lg:h-130 lg:w-112 w-full p-6 px-8 rounded-xl space-y-4">
+            <label className="block text-xl py-4 pb-6 text-center font-semibold">
               Book a call with our experts
             </label>
 
@@ -131,18 +129,18 @@ const Hero = () => {
               type="text"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none"
+              className="w-full px-4 py-4 rounded-md text-white bg-white/20 placeholder-white/70 focus:outline-none"
             />
             <input
               type="email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-4 rounded-md text-black bg-white focus:outline-none"
+              className="w-full px-4 py-4 rounded-md text-white bg-white/20 placeholder-white/70 focus:outline-none"
             />
             <textarea
               placeholder="How we can help?"
               required
-              className="w-full px-4 py-4 pb-16 rounded-md text-black bg-white focus:outline-none"
+              className="w-full px-4 py-4 pb-16 rounded-md text-white bg-white/20 placeholder-white/70 focus:outline-none"
             />
 
             <button
