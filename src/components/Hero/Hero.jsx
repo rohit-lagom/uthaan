@@ -32,11 +32,11 @@ const Hero = () => {
       ref={ref}
     >
       {/* Background Image */}
-      <img
-        src={HeroBG}
-        alt="Garden background"
-        className="absolute inset-0 w-full h-full object-cover opacity-100 z-0 pointer-events-none"
-      />
+   <div
+  className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0 pointer-events-none"
+  style={{ backgroundImage: `url(${HeroBG})` }}
+/>
+
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
