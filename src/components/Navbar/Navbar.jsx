@@ -74,7 +74,7 @@ const Navbar = () => {
               href=""
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-4 bg-green-700 font-semibold text-white text-sm rounded-xl hover:bg-gray-100 transition-colors"
+              className="px-6 py-4 bg-green-700 font-semibold text-white text-sm rounded-xl hover:bg-gray-100 hover:text-green-600 transition-colors"
             >
               Contact Us
             </a>
