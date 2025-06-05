@@ -71,10 +71,10 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-4 ml-6">
             <a
-              href=""
-              target="_blank"
+              href="#"
+              // target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-4 bg-green-700 font-semibold text-white text-sm rounded-xl hover:bg-gray-100 hover:text-green-600 transition-colors"
+              className="px-6 py-4 bg-green-700 font-semibold cursor-pointe text-white text-sm rounded-xl hover:bg-gray-100 hover:text-green-600 transition-colors"
             >
               Contact Us
             </a>
@@ -86,7 +86,7 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Menu"
               aria-expanded={mobileMenuOpen}
-              className="focus:outline-none"
+              className="focus:outline-none cursor-pointer"
             >
               {mobileMenuOpen ? (
                 <X className="h-8 w-8 text-white" />
