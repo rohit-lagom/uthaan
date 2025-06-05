@@ -32,11 +32,17 @@ const Hero = () => {
       ref={ref}
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0 pointer-events-none"
-        style={{ backgroundImage: `url(${HeroBG})` }}
-      />
+{/* Background Image with Backdrop Blur Effect */}
+<div className="absolute inset-0 z-0 pointer-events-none">
+  {/* Background Image Layer */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${HeroBG})` }}
+  />
 
+  {/* Backdrop Blur Layer */}
+  <div className="absolute inset-0 backdrop-blur-xs bg-black/10" />
+</div>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
