@@ -32,23 +32,22 @@ const Hero = () => {
       ref={ref}
     >
       {/* Background Image */}
-   <div
-  className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0 pointer-events-none"
-  style={{ backgroundImage: `url(${HeroBG})` }}
-/>
-
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0 pointer-events-none"
+        style={{ backgroundImage: `url(${HeroBG})` }}
+      />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
       {/* Navbar */}
-      <div className="relative z-30">
+      <div className="relative z-30 lg:pt-6">
         <Navbar />
       </div>
 
       {/* Content */}
       <motion.div
-        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16"
+        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16 lg:pt-24 "
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -116,11 +115,11 @@ const Hero = () => {
 
         {/* Right Section (Glassmorphism Form) */}
         <motion.div
-          className="hidden md:flex w-full md:w-1/2 lg:pl-16"
+          className="hidden md:flex justify-end w-full md:w-1/2 lg:max-w-xl"
           variants={fadeInUp}
           transition={{ delay: 0.4 }}
         >
-          <form className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-xl text-white lg:h-130 lg:w-112 w-full p-6 px-8 rounded-xl space-y-4">
+          <form className="backdrop-blur-lg bg-white/10 border border-white/30 shadow-xl text-white w-full lg:w-[540px] p-6 px-8 rounded-xl space-y-4">
             <label className="block text-xl py-4 pb-6 text-center font-semibold">
               Book a call with our experts
             </label>
