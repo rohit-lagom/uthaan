@@ -132,17 +132,11 @@ const Hero = () => {
               className="w-full px-4 py-4 pb-16 rounded-md text-white bg-white/20 placeholder-white/70 focus:outline-none"
             />
 
-            <button
+               <button
               type="submit"
               className="w-full bg-green-700 hover:bg-green-800 text-white px-6 py-3 mb-3 rounded-md transition font-semibold"
             >
-              Request a Pilot Demo
-            </button>
-            <button
-              type="button"
-              className="w-full text-green-400 hover:text-green-500 text-sm font-medium transition underline"
-            >
-              See How It Works
+              Request a call
             </button>
           </form>
         </motion.div>
