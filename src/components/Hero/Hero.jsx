@@ -91,13 +91,11 @@ const Hero = () => {
 
             {/* Heading & Subtext */}
             <h1 className="text-4xl font-semibold lg:text-5xl leading-tight text-center md:text-left">
-              Tokenising Trust{" "}
-              <span className="font-bold block">for 29 Crore Farmers</span>
+             From Crop to Cooperative—{" "}
+              <span className="font-bold block">Procurement, Perfected</span>
             </h1>
             <p className="text-lg text-white/80 text-center md:text-left">
-              Farmily is revolutionizing how cooperative farming works—bridging
-              gaps in finance, governance, traceability, and sustainability
-              using blockchain and smart contracts.
+              A blockchain-powered procurement network that links farmers, PACS & NABARD on one tamper-proof ledger—unlocking higher rural incomes at the national scale.
             </p>
 
             {/* Location Button */}
