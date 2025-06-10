@@ -2,13 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Navbar from "../Navbar/Navbar";
-import {
-  HeroBG,
-  Location,
-  Rating1,
-  Rating2,
-  Rating3,
-} from "../../assets/assets";
+import { HeroBG, Rating1, Rating2, Rating3 } from "../../assets/assets";
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -31,18 +25,15 @@ const Hero = () => {
       className="relative lg:min-h-screen pb-24 w-full transition-colors duration-300"
       ref={ref}
     >
-      {/* Background Image */}
-{/* Background Image with Backdrop Blur Effect */}
-<div className="absolute inset-0 z-0 pointer-events-none">
-  {/* Background Image Layer */}
-  <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-    style={{ backgroundImage: `url(${HeroBG})` }}
-  />
+      {/* Background Image with Blur */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${HeroBG})` }}
+        />
+        <div className="absolute inset-0 backdrop-blur-xs bg-black/10" />
+      </div>
 
-  {/* Backdrop Blur Layer */}
-  <div className="absolute inset-0 backdrop-blur-xs bg-black/10" />
-</div>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
@@ -53,7 +44,7 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16 lg:pt-24 "
+        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16 lg:pt-24"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -89,35 +80,30 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Heading & Subtext */}
+            {/* Heading */}
             <h1 className="text-4xl font-semibold lg:text-5xl leading-tight text-center md:text-left">
-             From Crop to Cooperative—{" "}
-              <span className="font-bold block">Procurement, Perfected</span>
+              From Crop to Cooperative -{" "}
+              <span className="font-bold block">Procurement, Perfected.</span>
             </h1>
             <p className="text-lg text-white/80 text-center md:text-left">
-              A blockchain-powered procurement network that links farmers, PACS & NABARD on one tamper-proof ledger—unlocking higher rural incomes at the national scale.
+              A blockchain-powered procurement network that links farmers, PACS
+              & NABARD on one tamper-proof ledger—unlocking higher rural incomes
+              at the national scale.
             </p>
 
-            {/* Location Button */}
-            <motion.button
-              className="flex items-center gap-3 mt-16 bg-white text-black px-5 py-3 rounded-2xl shadow-md hover:shadow-lg transition border-t-4 border-green-700 hover:border-green-700 mx-auto md:mx-0"
-              variants={fadeInUp}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="bg-green-700 p-2 rounded-xl">
-                <img src={Location} alt="Location icon" className="h-6 w-6" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold pt-2">New York City</div>
-                <div className="text-sm text-gray-700 pb-2">
-                  Brooklyn & Queens Area
-                </div>
-              </div>
-            </motion.button>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 md:pt-8 items-center md:items-start justify-center md:justify-start">
+              <button className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition cursor-pointer">
+                Request a Pilot Demo
+              </button>
+              <button className="bg-white hover:bg-gray-100 text-green-700 px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition border border-green-700 cursor-pointer">
+                See How It Works
+              </button>
+            </div>
           </div>
         </motion.div>
 
-        {/* Right Section (Glassmorphism Form) */}
+        {/* Right Section (Form with Glassmorphism) */}
         <motion.div
           className="hidden md:flex justify-end w-full md:w-1/2 lg:max-w-xl"
           variants={fadeInUp}
@@ -150,7 +136,13 @@ const Hero = () => {
               type="submit"
               className="w-full bg-green-700 hover:bg-green-800 text-white px-6 py-3 mb-3 rounded-md transition font-semibold"
             >
-              Request a call
+              Request a Pilot Demo
+            </button>
+            <button
+              type="button"
+              className="w-full text-green-400 hover:text-green-500 text-sm font-medium transition underline"
+            >
+              See How It Works
             </button>
           </form>
         </motion.div>
