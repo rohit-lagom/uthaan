@@ -81,10 +81,12 @@ const Hero = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl font-semibold lg:text-5xl leading-tight text-center md:text-left">
+            <h1 className="text-4xl  lg:text-5xl font-bold leading-tight text-center md:text-left text-white">
               From Crop to Cooperative -{" "}
-              <span className="font-bold block">Procurement, Perfected.</span>
+              <span className=" bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Procurement, Perfected.</span>
             </h1>
+       
+            
             <p className="text-lg text-white/80 text-center md:text-left">
               A blockchain-powered procurement network that links farmers, PACS
               & NABARD on one tamper-proof ledger—unlocking higher rural incomes
