@@ -18,8 +18,8 @@ const App = () => {
   return (
     <div>
       <Hero />
-      <Introduction />
       <Problem />
+      {/* <Introduction /> */}
       <InfoBanner />
       {/* <OurServices /> */}
       <Platform />
