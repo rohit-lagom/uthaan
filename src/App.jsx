@@ -16,6 +16,8 @@ import Problem from "./components/Problem/Problem";
 import Solution from "./components/Solution/Solution";
 import PolicyFit from "./components/PolicyFit/PolicyFit";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
+import StakeholderWins from "./components/StakeHolders/StakeHolders";
+import PilotMetrics from "./components/PilotMetrics/PilotMetrics";
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
       <Solution/>
       <PolicyFit/>
       <HowItWorks/>
+      <StakeholderWins/>
       {/* <Introduction /> */}
       {/* <InfoBanner /> */}
       {/* <OurServices /> */}
