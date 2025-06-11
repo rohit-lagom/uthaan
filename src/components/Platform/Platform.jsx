@@ -71,7 +71,7 @@ const Platform = () => {
   return (
     <section
       id="platform"
-      className="py-16 md:py-24 bg-[#F7F7F7]"
+      className="py-16 md:py-24 bg-gradient-to-br from-green-50 via-white to-emerald-50"
       ref={ref}
     >
       <div className="px-4 md:px-6 mx-auto max-w-7xl">
@@ -100,9 +100,9 @@ const Platform = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white/10 backdrop-blur-xl border border-green-500/20 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl"
+              className="bg-white/70 backdrop-blur-xl border border-green-200 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="bg-green-50 p-4 rounded-full mb-6 shadow-sm">
+              <div className="bg-green-100 p-4 rounded-full mb-6 shadow-sm">
                 {module.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">
