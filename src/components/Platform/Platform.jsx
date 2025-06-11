@@ -6,7 +6,8 @@ import {
   HiOutlineUserGroup,
   HiOutlineShoppingCart,
   HiOutlineGlobe,
-  HiOutlineLightningBolt
+  HiOutlineLightningBolt,
+  HiOutlineIdentification,
 } from 'react-icons/hi';
 
 const Platform = () => {
@@ -59,6 +60,11 @@ const Platform = () => {
       icon: <HiOutlineLightningBolt className="w-12 h-12 text-green-700" />,
       title: 'Impact Oracle',
       description: 'Verified data via satellite, soil sensors, and IoT',
+    },
+    {
+      icon: <HiOutlineIdentification className="w-12 h-12 text-green-700" />,
+      title: 'Agri Identity Hub',
+      description: 'Unified digital identity for farmers, PACS & cooperatives to access services securely',
     },
   ];
 
