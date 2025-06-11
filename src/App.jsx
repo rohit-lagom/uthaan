@@ -13,12 +13,14 @@ import CTA from "./components/CTA/CTA";
 import QuoteFooter from "./components/Footer/QuoteFooter";
 import Footer from "./components/Footer/Footer";
 import Problem from "./components/Problem/Problem";
+import Solution from "./components/Solution/Solution";
 
 const App = () => {
   return (
     <div>
       <Hero />
       <Problem />
+      <Solution/>
       {/* <Introduction /> */}
       <InfoBanner />
       {/* <OurServices /> */}
