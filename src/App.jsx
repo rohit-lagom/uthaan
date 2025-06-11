@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 import Problem from "./components/Problem/Problem";
 import Solution from "./components/Solution/Solution";
 import PolicyFit from "./components/PolicyFit/PolicyFit";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Problem />
       <Solution/>
       <PolicyFit/>
+      <HowItWorks/>
       {/* <Introduction /> */}
       {/* <InfoBanner /> */}
       {/* <OurServices /> */}
