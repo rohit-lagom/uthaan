@@ -26,7 +26,7 @@ const Solution = () => {
 
   return (
     <section className="py-20 relative bg-gradient-to-br from-emerald-50 via-white to-green-50">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
