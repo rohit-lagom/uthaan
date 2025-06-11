@@ -18,6 +18,7 @@ import PolicyFit from "./components/PolicyFit/PolicyFit";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import StakeholderWins from "./components/StakeHolders/StakeHolders";
 import PilotMetrics from "./components/PilotMetrics/PilotMetrics";
+import Roadmap from "./components/Roadmap/Roadmap";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
       <PolicyFit/>
       <HowItWorks/>
       <StakeholderWins/>
+      <PilotMetrics />
+      <Roadmap/>
       {/* <Introduction /> */}
       {/* <InfoBanner /> */}
       {/* <OurServices /> */}
