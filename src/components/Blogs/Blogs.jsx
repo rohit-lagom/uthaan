@@ -6,24 +6,24 @@ import { Blog1, Blog2, Blog3 } from "../../assets/assets";
 const blogPosts = [
   {
     image: Blog1,
-    title: "The Art of Designing Gardens: A Step-by-Step Guide",
-    date: "Apr 8, 2022",
+    title: "How Blockchain is Transforming Agri Procurement",
+    date: "Jun 14, 2025",
     description:
-      "Learn how to design a beautiful garden layout with our detailed, easy-to-follow guide.",
+      "Explore how tamper-proof ledgers are reducing disputes, improving transparency, and accelerating payments across rural supply chains.",
   },
   {
     image: Blog2,
-    title: "Plant Spotlight: 10 Must-Have Perennials for Every Garden",
-    date: "Mar 15, 2022",
+    title: "Carbon Farming 101: Turning Crops into Credits",
+    date: "Jun 08, 2025",
     description:
-      "Discover 10 essential perennial plants that will thrive in your garden all year long.",
+      "A deep dive into how farmers can monetize sustainable practices through carbon markets, verified via satellite and IoT data.",
   },
   {
     image: Blog3,
-    title: "Garden Pest Control: Useful Strategies for a Healthy Garden",
-    date: "Feb 28, 2022",
+    title: "AgriStack & PACS ERP: What You Need to Know",
+    date: "May 28, 2025",
     description:
-      "Protect your garden naturally with these effective pest control strategies.",
+      "Understand how India's Digital Agri Mission lays the foundation for scalable, data-driven farming through open APIs and cooperative integration.",
   },
 ];
 
@@ -44,13 +44,13 @@ const Blogs = () => {
       ref={ref}
       className="relative py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
     >
-      {/* Floating background blobs */}
+      {/* Floating blobs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-green-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
         <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-emerald-200/30 rounded-full mix-blend-multiply filter blur-2xl" />
       </div>
 
-      {/* Radial dot pattern overlay */}
+      {/* Dot overlay */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -62,6 +62,7 @@ const Blogs = () => {
         />
       </div>
 
+      {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -82,6 +83,7 @@ const Blogs = () => {
           </p>
         </motion.div>
 
+        {/* Blog cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
