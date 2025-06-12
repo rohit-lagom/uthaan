@@ -32,7 +32,7 @@ const App = () => {
       <PilotMetrics />
       {/* <Introduction /> */}
       {/* <InfoBanner /> */}
-      <OurServices />
+      {/* <OurServices /> */}
       <Platform />
       <Benefits />
       {/* <RecentWorks /> */}
