@@ -13,28 +13,28 @@ const testimonials = [
     name: "Alex Stokes",
     platform: "Review on Trustpilot",
     image: TestAlex,
-    text: "Despite the tight deadline, Farmily completed the project on time and within budget, exceeding my expectations every step of the way. I highly recommend!",
+    text: "Despite the tight deadline, Uthaan completed the project on time and within budget, exceeding my expectations every step of the way. I highly recommend!",
     rating: 5,
   },
   {
     name: "John Smith",
     platform: "Review on Trustpilot",
     image: TestJohn,
-    text: "I'm so grateful to have found Farmily. Their team not only transformed my neglected garden into a lush oasis but also provided great advice on how to maintain it.",
+    text: "I'm so grateful to have found Uthaan. Their team not only transformed my neglected garden into a lush oasis but also provided great advice on how to maintain it.",
     rating: 5,
   },
   {
     name: "Michael Harrison",
     platform: "Review on Google",
     image: TestMichael,
-    text: "I've been using Farmily for years now, and I couldn't be happier with the results. Their team always go above and beyond to ensure that my garden looks its best.",
+    text: "I've been using Uthaan for years now, and I couldn't be happier with the results. Their team always go above and beyond to ensure that my garden looks its best.",
     rating: 5,
   },
   {
     name: "David Peterson",
     platform: "Review on Trustpilot",
     image: TestDavid,
-    text: "Farmily completely exceeded my expectations. From the initial consultation to the final touches, their team was professional and attentive to every detail.",
+    text: "Uthaan completely exceeded my expectations. From the initial consultation to the final touches, their team was professional and attentive to every detail.",
     rating: 5,
   },
 ];
@@ -60,7 +60,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className="relative  py-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 overflow-hidden"
+      className="relative py-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 overflow-hidden"
       ref={ref}
     >
       <motion.div
@@ -77,7 +77,9 @@ const Testimonials = () => {
           </span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full" />
-        <p className="text-white/70 mt-4 text-lg">Hear what our users are saying</p>
+        <p className="text-white/70 mt-4 text-lg">
+          Hear what our users are saying
+        </p>
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative overflow-hidden group">

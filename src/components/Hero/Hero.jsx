@@ -75,22 +75,21 @@ const Hero = () => {
                 />
               </div>
               <div>
-                <div>⭐⭐⭐⭐⭐</div>
+                <div className="text-yellow-300">⭐⭐⭐⭐⭐</div>
                 <div className="text-white text-sm">From 2000+ ratings</div>
               </div>
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl  lg:text-5xl font-bold leading-tight text-center md:text-left text-white">
-              From Crop to Cooperative -{" "}
-              <span className=" bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Procurement, Perfected.</span>
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-center md:text-left text-white">
+              From Crop to Cooperative –{" "}
+              <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
+                Procurement, Perfected.
+              </span>
             </h1>
-       
-            
+
             <p className="text-lg text-white/80 text-center md:text-left">
-              A blockchain-powered procurement network that links farmers, PACS
-              & NABARD on one tamper-proof ledger—unlocking higher rural incomes
-              at the national scale.
+              A blockchain-powered procurement network that links farmers, PACS & NABARD on one tamper-proof ledger—unlocking higher rural incomes at the national scale.
             </p>
 
             {/* CTA Buttons */}
@@ -105,7 +104,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Section (Form with Glassmorphism) */}
+        {/* Right Section (Form) */}
         <motion.div
           className="hidden md:flex justify-end w-full md:w-1/2 lg:max-w-xl"
           variants={fadeInUp}
@@ -134,7 +133,7 @@ const Hero = () => {
               className="w-full px-4 py-4 pb-16 rounded-md text-white bg-white/20 placeholder-white/70 focus:outline-none"
             />
 
-               <button
+            <button
               type="submit"
               className="w-full bg-green-700 hover:bg-green-800 text-white px-6 py-3 mb-3 rounded-md transition font-semibold"
             >

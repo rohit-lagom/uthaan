@@ -7,17 +7,17 @@ const faqs = [
   {
     question: "Do you offer maintenance services?",
     answer:
-      "Yes, Farmily provides comprehensive landscape maintenance services to keep your garden looking its best year-round. We offer tailored maintenance plans to suit your schedule and budget.",
+      "Yes, Uthaan provides comprehensive landscape maintenance services to keep your garden looking its best year-round. We offer tailored maintenance plans to suit your schedule and budget.",
   },
   {
     question: "Do you use organic gardening methods?",
     answer:
-      "At Farmily, we prioritize sustainable practices and use organic fertilizers and herbicides whenever possible. We believe in promoting the health and vitality of your garden while minimizing environmental impact.",
+      "At Uthaan, we prioritize sustainable practices and use organic fertilizers and herbicides whenever possible. We believe in promoting the health and vitality of your garden while minimizing environmental impact.",
   },
   {
     question: "Are your gardeners licensed and insured?",
     answer:
-      "Absolutely. Farmily is fully licensed and insured for your peace of mind. Our team consists of experienced professionals committed to delivering high-quality workmanship and exceptional service.",
+      "Absolutely. Uthaan is fully licensed and insured for your peace of mind. Our team consists of experienced professionals committed to delivering high-quality workmanship and exceptional service.",
   },
 ];
 
