@@ -1,69 +1,95 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { Calendar, ArrowRight, Phone, Mail } from 'lucide-react';
 
 const CTA = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
-    <section
-      ref={ref}
-      className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white scroll-mt-20 relative overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-6">
+    <section className="py-20 relative bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-green-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-teal-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000" />
+      </div>
+
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ready to make procurement{' '}
+            <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
+              painless?
+            </span>
+          </h2>
+          
+          <p className="text-xl md:text-2xl text-emerald-100/90 max-w-4xl mx-auto mb-8">
+            Book a 30-min strategy call and join the next set of PACS going live on the Cooperative Blockchain Procurement Network.
+          </p>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="max-w-7xl mx-auto text-center backdrop-blur-lg bg-white/10 rounded-2xl border border-white/20 shadow-xl px-8 py-14"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white"
-          >
-            Ready to Transform Your Co-op, CSR Program, or Agri Investment?
-          </motion.h2>
+          <button className="group bg-gradient-to-r from-emerald-500 to-green-500 text-white px-10 py-5 rounded-2xl text-xl font-semibold hover:from-emerald-400 hover:to-green-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-3 backdrop-blur-sm">
+            <Calendar className="w-6 h-6" />
+            Book Strategy Call
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </button>
+          
+          <button className="group text-white bg-white/10 backdrop-blur-xl border border-white/20 px-10 py-5 rounded-2xl text-xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-3xl">
+            Request Demo
+          </button>
+        </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl mb-10 text-white/90"
-          >
-            Let our team show you how <strong>Farmily</strong> can unlock transparency, capital, and trust for your organization.
-          </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        >
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
+            <Phone className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-white mb-2">Schedule a Call</h3>
+            <p className="text-emerald-100/80">Get personalized consultation for your PACS</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
+            <Mail className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-white mb-2">Get in Touch</h3>
+            <p className="text-emerald-100/80">Reach out for partnership opportunities</p>
+          </div>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {/* Glassmorphic Button */}
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-200 
-              bg-white/10 text-white border border-white/30 backdrop-blur-md 
-              hover:bg-white/20 hover:shadow-lg"
-            >
-              Request a Demo
-            </a>
-
-            {/* Secondary Glassmorphic Button */}
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-200 
-              bg-white/5 text-white border border-white/30 backdrop-blur-md 
-              hover:bg-white/10 hover:shadow-lg"
-            >
-              Download Brochure
-            </a>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <div className="inline-flex items-center gap-4 text-emerald-300/70">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent to-emerald-300/50" />
+            <span className="text-sm font-medium">Join the Agricultural Revolution</span>
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-emerald-300/50" />
+          </div>
         </motion.div>
       </div>
     </section>
