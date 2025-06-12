@@ -11,30 +11,30 @@ import {
 const testimonials = [
   {
     name: "Alex Stokes",
-    platform: "Review on Trustpilot",
+    platform: "District PACS Officer – Punjab",
     image: TestAlex,
-    text: "Despite the tight deadline, Uthaan completed the project on time and within budget, exceeding my expectations every step of the way. I highly recommend!",
+    text: "Uthaan’s blockchain ledger cut our payment delays drastically. Farmers now get transparency they’ve never seen before.",
     rating: 5,
   },
   {
     name: "John Smith",
-    platform: "Review on Trustpilot",
+    platform: "Farmer – Himachal Pradesh",
     image: TestJohn,
-    text: "I'm so grateful to have found Uthaan. Their team not only transformed my neglected garden into a lush oasis but also provided great advice on how to maintain it.",
+    text: "Earlier we waited weeks for payments. Now I get a digital receipt and see dues instantly on the app. It’s a game-changer.",
     rating: 5,
   },
   {
     name: "Michael Harrison",
-    platform: "Review on Google",
+    platform: "Cooperative Secretary – NABARD Pilot",
     image: TestMichael,
-    text: "I've been using Uthaan for years now, and I couldn't be happier with the results. Their team always go above and beyond to ensure that my garden looks its best.",
+    text: "Our audits are simpler now. The real-time dashboard from Uthaan helps us track every grain lot from the moment it’s delivered.",
     rating: 5,
   },
   {
     name: "David Peterson",
-    platform: "Review on Trustpilot",
+    platform: "Agritech Evaluator – FPO Network",
     image: TestDavid,
-    text: "Uthaan completely exceeded my expectations. From the initial consultation to the final touches, their team was professional and attentive to every detail.",
+    text: "Uthaan bridges PACS, farmers, and national infra like AgriStack—this is future-ready agri-tech done right.",
     rating: 5,
   },
 ];
@@ -78,11 +78,11 @@ const Testimonials = () => {
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full" />
         <p className="text-white/70 mt-4 text-lg">
-          Hear what our users are saying
+          Hear what real users from the agri ecosystem are saying.
         </p>
       </motion.div>
 
-      <div className="conatiner mx-auto px-6 relative overflow-hidden group">
+      <div className="container mx-auto px-6 relative overflow-hidden group">
         <div className="flex gap-6 py-5 my-5 w-max [animation:marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div

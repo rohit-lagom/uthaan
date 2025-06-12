@@ -53,7 +53,7 @@ const PolicyFit = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4">
           {policies.map((policy, index) => (
             <motion.div
               key={index}
