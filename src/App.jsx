@@ -30,13 +30,13 @@ const App = () => {
       <HowItWorks/>
       <StakeholderWins/>
       <PilotMetrics />
-      <Roadmap/>
       {/* <Introduction /> */}
       {/* <InfoBanner /> */}
       {/* <OurServices /> */}
       <Platform />
       <Benefits />
-      <RecentWorks />
+      {/* <RecentWorks /> */}
+      <Roadmap/>
       <Testimonials />
       <FAQ />
       <Blogs />
