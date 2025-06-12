@@ -80,8 +80,27 @@ const Benefits = () => {
     <section
       id="benefits"
       ref={ref}
-      className="relative py-20 md:py-28 scroll-mt-20 bg-gradient-to-r from-green-600 to-green-700 text-white"
+      className="relative py-20 md:py-28 scroll-mt-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 text-white"
     >
+      {/* Background glows */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-emerald-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-green-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-teal-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000" />
+      </div>
+
+      {/* Grid overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
+      </div>
+
+      {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -102,7 +121,7 @@ const Benefits = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {beneficiaries.map((beneficiary, index) => (
             <motion.div
