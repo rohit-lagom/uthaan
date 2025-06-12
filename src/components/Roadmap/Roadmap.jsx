@@ -38,31 +38,37 @@ const Roadmap = () => {
     switch (status) {
       case 'current':
         return {
-          bg: 'bg-emerald-100',
+          bg: 'bg-emerald-100/80',
           text: 'text-emerald-600',
-          border: 'border-emerald-200',
+          border: 'border-white/20',
           dot: 'bg-emerald-600'
         };
       case 'next':
         return {
-          bg: 'bg-blue-100',
+          bg: 'bg-blue-100/80',
           text: 'text-blue-600',
-          border: 'border-blue-200',
+          border: 'border-white/20',
           dot: 'bg-blue-600'
         };
       default:
         return {
-          bg: 'bg-gray-100',
+          bg: 'bg-gray-100/80',
           text: 'text-gray-600',
-          border: 'border-gray-200',
+          border: 'border-white/20',
           dot: 'bg-gray-400'
         };
     }
   };
 
   return (
-    <section className="py-20 relative bg-gradient-to-br from-pink-50 via-white to-rose-50">
-      <div className="container mx-auto px-6">
+    <section className="py-20 relative bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-pink-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-rose-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,15 +76,15 @@ const Roadmap = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Road to <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Ecosystem</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Road to <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">Ecosystem</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full" />
         </motion.div>
 
         <div className="relative">
           {/* Timeline line for desktop */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-pink-300 via-rose-300 to-transparent" />
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-pink-300/30 via-rose-300/30 to-transparent" />
           
           <div className="space-y-12 lg:space-y-24">
             {phases.map((phase, index) => {
@@ -96,13 +102,13 @@ const Roadmap = () => {
                 >
                   {/* Timeline dot for desktop */}
                   <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2">
-                    <div className={`w-4 h-4 ${colors.dot} rounded-full border-4 border-white z-10 relative shadow-lg`} />
+                    <div className={`w-4 h-4 ${colors.dot} rounded-full border-4 border-gray-900 z-10 relative shadow-lg`} />
                   </div>
                   
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                    <div className={`bg-white/70 backdrop-blur-sm border ${colors.border} rounded-3xl p-8 group hover:bg-white/90 hover:border-opacity-60 transition-all duration-300 shadow-lg hover:shadow-xl`}>
+                    <div className={`bg-white/10 backdrop-blur-xl border ${colors.border} rounded-3xl p-8 group hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl`}>
                       <div className="flex items-start gap-6">
-                        <div className={`${colors.bg} p-4 rounded-2xl flex-shrink-0`}>
+                        <div className={`${colors.bg} backdrop-blur-sm p-4 rounded-2xl flex-shrink-0`}>
                           <phase.icon className={`w-8 h-8 ${colors.text}`} />
                         </div>
                         
@@ -110,10 +116,10 @@ const Roadmap = () => {
                           <div className={`text-sm font-medium ${colors.text} mb-2`}>
                             {phase.phase}
                           </div>
-                          <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                          <h3 className="text-2xl font-bold text-white mb-4">
                             {phase.title}
                           </h3>
-                          <p className="text-slate-600 leading-relaxed">
+                          <p className="text-gray-300 leading-relaxed">
                             {phase.description}
                           </p>
                         </div>
