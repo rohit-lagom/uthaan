@@ -60,39 +60,24 @@ const Testimonials = () => {
 
   return (
     <div
-      className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-24 overflow-hidden"
+      className="relative  py-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 overflow-hidden"
       ref={ref}
     >
       <motion.div
-        className="relative max-w-7xl mx-auto px-6 mb-12"
+        className="relative max-w-7xl mx-auto px-6 text-center mb-12"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         custom={0}
       >
-        {/* Mobile Layout - Centered */}
-        <div className="flex flex-col items-center text-center md:hidden">
-          <h2 className="text-3xl font-bold mb-2">
-            Trusted by 1000+ <span className="block">customers</span>
-          </h2>
-          <div className="text-2xl font-semibold">
-            4.9 <span className="text-sm align-middle">⭐⭐⭐⭐⭐</span>
-          </div>
-          <p className="text-white/80 mt-1">From 2000+ reviews</p>
-        </div>
-
-        {/* Desktop Layout - Left Aligned */}
-        <div className="hidden md:flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div className="text-4xl font-semibold leading-tight text-white">
-            Trusted by 1000+ <span className="block ">customers</span>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-white">
-              4.9 <span className="text-xl align-middle">⭐⭐⭐⭐⭐</span>
-            </div>
-            <div className="text-white/80 text-3xl ">From 2000+ reviews</div>
-          </div>
-        </div>
+        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          Voices from the{" "}
+          <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
+            Ground
+          </span>
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full" />
+        <p className="text-white/70 mt-4 text-lg">Hear what our users are saying</p>
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative overflow-hidden group">
@@ -100,7 +85,7 @@ const Testimonials = () => {
           {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div
               key={i}
-              className="bg-white/10 text-white p-6 sm:p-8 rounded-xl border border-white/20 backdrop-blur-lg shadow-lg w-64 sm:w-72 md:w-80 h-auto flex-shrink-0 transform transition duration-300 hover:scale-105"
+              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 w-72 sm:w-80 h-80 hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-xl hover:shadow-2xl flex-shrink-0"
               variants={fadeInUp}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
@@ -119,8 +104,8 @@ const Testimonials = () => {
                   <div className="text-white/80 text-sm">{t.platform}</div>
                 </div>
               </div>
-              <p className="text-white/90 pt-4">{t.text}</p>
-              <div className="text-yellow-300 pt-4">
+              <p className="text-white/90 mb-4">{t.text}</p>
+              <div className="text-yellow-300 text-lg">
                 {"⭐".repeat(t.rating)}
               </div>
             </motion.div>
