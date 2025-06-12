@@ -14,19 +14,19 @@ const StakeholderWins = () => {
       icon: Building2,
       title: "PACS",
       benefit: "Single dashboard for stocks, payments & audit trails.",
-      color: "blue"
+      color: "green"
     },
     {
       icon: Shield,
       title: "NABARD / FCI",
       benefit: "Real-time procurement analytics, fraud-proof records.",
-      color: "purple"
+      color: "teal"
     },
     {
       icon: ShoppingBag,
       title: "Consumers",
       benefit: "Transparent provenance builds trust for future retail traceability.",
-      color: "orange"
+      color: "emerald"
     }
   ];
 
@@ -39,24 +39,17 @@ const StakeholderWins = () => {
         border: "border-white/20",
         hoverBorder: "hover:border-white/30"
       },
-      blue: {
-        bg: "bg-blue-100/80",
-        hoverBg: "group-hover:bg-blue-200/80",
-        text: "text-blue-600",
+      green: {
+        bg: "bg-green-100/80",
+        hoverBg: "group-hover:bg-green-200/80",
+        text: "text-green-600",
         border: "border-white/20",
         hoverBorder: "hover:border-white/30"
       },
-      purple: {
-        bg: "bg-purple-100/80",
-        hoverBg: "group-hover:bg-purple-200/80",
-        text: "text-purple-600",
-        border: "border-white/20",
-        hoverBorder: "hover:border-white/30"
-      },
-      orange: {
-        bg: "bg-orange-100/80",
-        hoverBg: "group-hover:bg-orange-200/80",
-        text: "text-orange-600",
+      teal: {
+        bg: "bg-teal-100/80",
+        hoverBg: "group-hover:bg-teal-200/80",
+        text: "text-teal-600",
         border: "border-white/20",
         hoverBorder: "hover:border-white/30"
       }
@@ -65,15 +58,15 @@ const StakeholderWins = () => {
   };
 
   return (
-    <section className="py-20 relative bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900">
-      {/* Animated background elements */}
+    <section className="py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+      {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
-        <div className="absolute top-1/2 right-1/2 w-64 h-64 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-green-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
+        <div className="absolute top-1/2 right-1/2 w-64 h-64 bg-teal-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,11 +74,11 @@ const StakeholderWins = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Stakeholder <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Wins</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+            Stakeholder <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Wins</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full" />
-          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 mt-6 max-w-3xl mx-auto">
             Every participant in the ecosystem benefits from our blockchain solution
           </p>
         </motion.div>
@@ -103,16 +96,16 @@ const StakeholderWins = () => {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="group"
               >
-                <div className={`bg-white/10 backdrop-blur-xl border ${colorClasses.border} rounded-3xl p-8 h-full hover:bg-white/20 ${colorClasses.hoverBorder} transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl`}>
+                <div className={`bg-white/60 backdrop-blur-xl border ${colorClasses.border} rounded-3xl p-8 h-full hover:bg-white/80 ${colorClasses.hoverBorder} transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl`}>
                   <div className={`${colorClasses.bg} backdrop-blur-sm p-4 rounded-2xl w-fit mb-6 ${colorClasses.hoverBg} transition-colors`}>
                     <stakeholder.icon className={`w-8 h-8 ${colorClasses.text}`} />
                   </div>
                   
-                  <h3 className={`text-2xl font-bold text-white mb-4`}>
+                  <h3 className={`text-2xl font-bold text-slate-900 mb-4`}>
                     {stakeholder.title}
                   </h3>
                   
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed">
                     {stakeholder.benefit}
                   </p>
                 </div>
