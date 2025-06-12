@@ -82,7 +82,7 @@ const Testimonials = () => {
         </p>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 relative overflow-hidden group">
+      <div className="conatiner mx-auto px-6 relative overflow-hidden group">
         <div className="flex gap-6 py-5 my-5 w-max [animation:marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div

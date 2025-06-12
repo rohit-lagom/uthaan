@@ -19,11 +19,8 @@ const Introduction = () => {
   };
 
   return (
-    <div
-      ref={ref}
-      className="py-20 px-4 md:px-8 lg:px-16 bg-[#F7F7F7]"
-    >
-      <div className="max-w-7xl mx-auto">
+    <div ref={ref} className="py-20 px-4 md:px-8 lg:px-16 bg-[#F7F7F7]">
+      <div className="conatiner mx-auto">
         <motion.div
           className="flex flex-col md:flex-row items-center justify-between gap-12"
           variants={fadeInUp}
@@ -31,36 +28,32 @@ const Introduction = () => {
           animate={inView ? "visible" : "hidden"}
         >
           {/* Left Side: Image */}
-     <motion.div
-  className="w-full md:w-1/2 relative"
-  variants={fadeInUp}
->
-  <div className="aspect-[4/3] w-full rounded-xl shadow-lg bg-gray-100 overflow-hidden">
-    <img
-      src={IntroPic}
-      alt="Hero"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          <motion.div className="w-full md:w-1/2 relative" variants={fadeInUp}>
+            <div className="aspect-[4/3] w-full rounded-xl shadow-lg bg-gray-100 overflow-hidden">
+              <img
+                src={IntroPic}
+                alt="Hero"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-  <motion.div
-    className="absolute bottom-5 flex bg-white p-4 mx-4 rounded-xl shadow-md"
-    variants={fadeInUp}
-    transition={{ delay: 0.2 }}
-  >
-    <div>
-      <img src={Quote} alt="" className="h-12 w-12 bg-white" />
-    </div>
-    <div className="px-2 text-sm md:text-base text-gray-60">
-      <div className="text-black font-semibold">
-        We take the time to understand your unique needs and
-        preferences to ensure that your garden reflects your vision.
-      </div>
-      <div className="text-gray-500">Ricky Stokes, CEO</div>
-    </div>
-  </motion.div>
-</motion.div>
-
+            <motion.div
+              className="absolute bottom-5 flex bg-white p-4 mx-4 rounded-xl shadow-md"
+              variants={fadeInUp}
+              transition={{ delay: 0.2 }}
+            >
+              <div>
+                <img src={Quote} alt="" className="h-12 w-12 bg-white" />
+              </div>
+              <div className="px-2 text-sm md:text-base text-gray-60">
+                <div className="text-black font-semibold">
+                  We take the time to understand your unique needs and
+                  preferences to ensure that your garden reflects your vision.
+                </div>
+                <div className="text-gray-500">Ricky Stokes, CEO</div>
+              </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Side: Text Content */}
           <motion.div

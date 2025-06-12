@@ -36,7 +36,7 @@ const RecentWorks = () => {
       ref={ref}
       className="py-20 bg-gradient-to-br from-green-50 via-white to-emerald-50"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="conatiner mx-auto px-6">
         <div className="text-center mb-12">
           <motion.h2
             className="text-4xl font-semibold text-slate-900"

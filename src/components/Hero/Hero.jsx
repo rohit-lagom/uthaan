@@ -44,7 +44,7 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-20 max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16 lg:pt-24"
+        className="relative z-20 container w-full mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between lg:gap-14 pt-16 lg:pt-24"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}

@@ -42,10 +42,10 @@ const Navbar = () => {
       variants={fadeInDown}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="pt-6 lg:pt-6 mx-auto max-w-xl md:max-w-7xl"
+      className="pt-6 lg:pt-6 mx-auto container "
     >
       <nav className="rounded-2xl p-4 mx-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10">
-        <div className="container mx-auto max-w-7xl flex items-center relative">
+        <div className="container mx-auto flex items-center relative">
           {/* Logo on the left */}
           <a href="/" className="mr-4">
             <img src={Logo} alt="Logo" className="h-8 p-1" />
@@ -107,7 +107,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full md:hidden mt-6 z-50"
           >
-            <div className="w-full max-w-7xl mx-auto rounded-xl bg-white backdrop-blur-3xl shadow-lg p-6 flex flex-col gap-4 text-gray-700 border border-white/20 z-30 text-center">
+            <div className="w-full mx-auto rounded-xl bg-white backdrop-blur-3xl shadow-lg p-6 flex flex-col gap-4 text-gray-700 border border-white/20 z-30 text-center">
               {navLinks.map((link) => (
                 <a
                   key={link}

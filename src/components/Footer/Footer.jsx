@@ -76,9 +76,8 @@ const Footer = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto lg:px-6 relative z-10">
+      <div className="conatiner mx-auto lg:px-6 relative z-10">
         <div className="bg-white/60 backdrop-blur-xl border border-white/30 shadow-md rounded-3xl p-10 flex flex-col md:flex-row justify-between gap-12">
-
           {/* Logo and Description */}
           <div className="flex flex-col gap-8 max-w-sm">
             <a href="/" aria-label="Home">
@@ -111,7 +110,9 @@ const Footer = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 flex-grow">
             {footerLinks.map(({ title, links }) => (
               <div key={title}>
-                <h4 className="mb-6 font-semibold text-xl text-slate-900">{title}</h4>
+                <h4 className="mb-6 font-semibold text-xl text-slate-900">
+                  {title}
+                </h4>
                 <ul className="space-y-4">
                   {links.map(({ label, url }) => (
                     <li key={label}>
@@ -127,7 +128,6 @@ const Footer = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </footer>
