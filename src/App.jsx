@@ -38,7 +38,7 @@ const App = () => {
       {/* <RecentWorks /> */}
       <Roadmap/>
       <Testimonials />
-      <FAQ />
+      {/* <FAQ /> */}
       <Blogs />
       <CTA />
       {/* <QuoteFooter /> */}

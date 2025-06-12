@@ -40,44 +40,79 @@ const Blogs = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative z-20 max-w-7xl mx-auto px-6 py-20">
-      <motion.div
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={fadeInUp}
-        className="text-center mb-12"
-      >
-        <h2 className="text-3xl font-semibold">Stay Ahead of the Curve</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-          Explore our latest insights on blockchain agriculture, carbon farming,
-          and the future of rural finance.
-        </p>
-      </motion.div>
+    <section
+      ref={ref}
+      className="relative py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
+    >
+      {/* Floating background blobs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-green-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-emerald-200/30 rounded-full mix-blend-multiply filter blur-2xl" />
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {blogPosts.map((post, idx) => (
-          <motion.div
-            key={idx}
-            className="bg-white rounded-xl overflow-hidden transition-transform hover:scale-105 duration-300 shadow-sm"
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            custom={idx + 1}
-            variants={fadeInUp}
-          >
-            <div className="aspect-[4/3] w-full">
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-            <div className="p-4">
-              <div className="text-sm text-gray-500 mb-1">{post.date}</div>
-              <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
-              <p className="text-sm text-gray-600">{post.description}</p>
-            </div>
-          </motion.div>
-        ))}
+      {/* Radial dot pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, rgb(34 197 94) 1px, transparent 0)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <motion.div
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeInUp}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+            Stay Ahead of the{" "}
+            <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+              Curve
+            </span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full" />
+          <p className="text-gray-700 max-w-2xl mx-auto mt-6 text-lg">
+            Explore our latest insights on blockchain agriculture, carbon
+            farming, and the future of rural finance.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {blogPosts.map((post, index) => (
+            <motion.div
+              key={index}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              custom={index}
+              variants={fadeInUp}
+              className="group"
+            >
+              <div className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden hover:bg-white/80 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl h-full">
+                <div className="aspect-[4/3] w-full">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover rounded-t-3xl"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="text-sm text-gray-500 mb-2">{post.date}</div>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-slate-700 leading-relaxed">
+                    {post.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
