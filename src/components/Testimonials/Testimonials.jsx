@@ -64,7 +64,7 @@ const Testimonials = () => {
       ref={ref}
     >
       <motion.div
-        className="relative max-w-7xl mx-auto px-6 text-center mb-12"
+        className="relative container mx-auto px-6 text-center mb-12"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}

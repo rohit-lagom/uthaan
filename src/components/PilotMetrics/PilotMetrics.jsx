@@ -72,7 +72,7 @@ const PilotMetrics = () => {
         </motion.div>
 
         {/* Metrics Grid */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+<div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           {metrics.map((metric, index) => (
             <motion.div
               key={index}
