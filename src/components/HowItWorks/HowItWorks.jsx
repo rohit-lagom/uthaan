@@ -31,8 +31,23 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-gradient-to-br from-green-50 via-white to-emerald-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 relative bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-green-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-teal-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000" />
+      </div>
+
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,11 +55,11 @@ const HowItWorks = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            How It <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Works</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            How It <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">Works</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full" />
-          <p className="text-xl text-slate-600 mt-6 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full" />
+          <p className="text-xl text-gray-300 mt-6 max-w-2xl mx-auto">
             Four simple steps to revolutionize agricultural procurement
           </p>
         </motion.div>
@@ -59,23 +74,23 @@ const HowItWorks = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group relative"
             >
-              <div className="bg-white/70 backdrop-blur-sm border border-green-100 rounded-3xl p-8 h-full hover:bg-white/90 hover:border-green-200 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 h-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                 <div className="text-center">
-                  <div className="bg-green-100 p-4 rounded-2xl w-fit mx-auto mb-6 group-hover:bg-green-200 transition-colors">
-                    <step.icon className="w-8 h-8 text-green-600" />
+                  <div className="bg-emerald-500/20 backdrop-blur-sm p-4 rounded-2xl w-fit mx-auto mb-6 group-hover:bg-emerald-500/30 transition-colors">
+                    <step.icon className="w-8 h-8 text-emerald-300" />
                   </div>
-
-                  <div className="text-5xl font-bold text-green-200 mb-4">{step.step}</div>
-
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{step.title}</h3>
-
-                  <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                  
+                  <div className="text-5xl font-bold text-emerald-200/50 mb-4">{step.step}</div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
+                  
+                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
                 </div>
               </div>
-
+              
               {/* Connection line for larger screens */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-gradient-to-r from-green-300 to-transparent transform -translate-y-1/2 z-10" />
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-gradient-to-r from-emerald-300/50 to-transparent transform -translate-y-1/2 z-10" />
               )}
             </motion.div>
           ))}
