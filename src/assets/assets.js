@@ -5,7 +5,7 @@ import IntroLeaf from "./Intro-Leaf.svg";
 import IntroPic from "./IntroPic.jpeg";
 import Quote from "./Quote.svg";
 import HeroBG from "./HeroBG.jpeg";
-import HeroBanner from "./HeroBanner.png";
+import HeroBanner from "./HeroBanner.svg";
 import Location from "./Location.svg";
 import Rating1 from "./Rating1.jpeg";
 import Rating2 from "./Rating2.jpeg";
