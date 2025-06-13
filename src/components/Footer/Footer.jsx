@@ -81,7 +81,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="flex flex-col gap-8 max-w-sm">
             <a href="/" aria-label="Home">
-              <img src={LogoFooter} alt="Gardener Logo" className="w-40" />
+              <img src={LogoFooter} alt="Uthaan Logo" className="w-40" />
             </a>
             <p className="text-slate-700 leading-relaxed">
               Unleash the full potential of your{" "}
