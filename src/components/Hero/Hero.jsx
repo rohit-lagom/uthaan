@@ -31,7 +31,7 @@ const Hero = () => {
     <div
       id="home"
       ref={ref}
-      className="relative w-full min-h-screen pb-18 transition-colors duration-300 overflow-hidden"
+      className="relative w-full lg:min-h-screen pb-18 transition-colors duration-300 overflow-hidden"
     >
       {/* Background Image with Glass Blur */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -50,13 +50,19 @@ const Hero = () => {
         <Navbar />
       </div>
 
-      {/* Centered Badge */}
-      <div className="relative z-30 mt-8 flex justify-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-600 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow">
-          <ShieldCheck className="w-4 h-4" />
-          Blockchain Powered Agri Procurement
-        </div>
-      </div>
+   {/* Centered Badge with Motion */}
+<motion.div
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+  className="relative z-30 mt-8 flex justify-center"
+>
+  <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-600 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow">
+    <ShieldCheck className="w-4 h-4" />
+    Blockchain Powered Agri Procurement
+  </div>
+</motion.div>
+
 
       {/* Main Content */}
       <motion.div
@@ -101,14 +107,15 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 md:pt-6 items-center lg:items-start justify-center lg:justify-start">
-              <button className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition cursor-pointer">
-                Request a Pilot Demo
-              </button>
-              <button className="bg-white hover:bg-gray-100 text-green-700 px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition border border-green-700 cursor-pointer">
-                See How It Works
-              </button>
-            </div>
+ <div className="flex flex-col sm:flex-row gap-4 pt-4 md:pt-6 items-center lg:items-start justify-center lg:justify-start">
+  <button className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all shadow-md hover:shadow-lg cursor-pointer">
+    Request a Pilot Demo
+  </button>
+  <button className="bg-white/10 border border-white/20 text-emerald-300 hover:bg-white/20 backdrop-blur-md px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all cursor-pointer">
+    See How It Works
+  </button>
+</div>
+
           </div>
         </motion.div>
 

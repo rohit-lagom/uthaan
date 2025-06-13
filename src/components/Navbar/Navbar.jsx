@@ -44,12 +44,18 @@ const Navbar = () => {
       animate={inView ? "visible" : "hidden"}
       className="pt-4 lg:pt-4 mx-auto max-w-7xl px-6"
     >
-      <nav className="rounded-2xl p-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10 
-      relative">
+      <nav
+        className="rounded-2xl p-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10 
+      relative"
+      >
         <div className=" mx-auto flex items-center relative">
           {/* Logo on the left */}
           <a href="/" className="mr-4">
-            <img src={Logo} alt="Logo" className="lg:h-12 md:h-11 sm:h-10 h-8 p-1 bg-cover " />
+            <img
+              src={Logo}
+              alt="Logo"
+              className="lg:h-12 md:h-11 sm:h-10 h-8 p-1 bg-cover "
+            />
           </a>
 
           {/* Spacer to push rest to the right */}
@@ -73,9 +79,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4 ml-6">
             <a
               href="#"
-              // target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-4 bg-green-700 font-semibold cursor-pointe text-white text-sm rounded-xl hover:bg-gray-100 hover:text-green-600 transition-colors"
+              className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-white/20 hover:text-white transition-all shadow-lg"
             >
               Contact Us
             </a>
@@ -121,10 +126,10 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href=""
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 bg-green-700 font-semibold text-white text-sm rounded-xl hover:bg-green-100 hover:text-black transition-colors duration-300 hover:border-green-700 hover:border-2"
+                className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-white/20 hover:text-white transition-all shadow-lg"
               >
                 Contact Us
               </a>
