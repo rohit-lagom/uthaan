@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className=" mx-auto flex items-center relative">
           {/* Logo on the left */}
           <a href="/" className="mr-4">
-            <img src={Logo} alt="Logo" className="h-8 p-1" />
+            <img src={Logo} alt="Logo" className="h-14 p-1 bg-cover mix-blend-multiply" />
           </a>
 
           {/* Spacer to push rest to the right */}

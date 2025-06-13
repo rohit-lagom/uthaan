@@ -1,4 +1,5 @@
-import Logo from "./Logo-White.png";
+// import Logo from "./Logo-White.png";
+import Logo from "./Logo.svg";
 import LogoFooter from "./Logo.png";
 import IntroSci from "./Intro-Sci.svg";
 import IntroLeaf from "./Intro-Leaf.svg";
