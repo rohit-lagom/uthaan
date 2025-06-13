@@ -98,13 +98,22 @@ const Hero = () => {
         </motion.div>
 
         {/* Right Section – Animated Image */}
-<div className="w-full lg:w-1/2 flex justify-center">
+<motion.div
+  className="w-full lg:w-1/2 flex justify-center"
+  animate={{ y: [0, -10, 0] }}
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
   <img
     src={HeroBanner}
     alt="Hero Illustration"
-    className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain rounded-2xl"
+    className="w-full max-w-md md:max-w-lg lg:max-w-lg h-auto object-contain rounded-2xl"
   />
-</div>
+</motion.div>
+
 
       </motion.div>
     </div>
