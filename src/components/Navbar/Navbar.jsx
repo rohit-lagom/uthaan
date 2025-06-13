@@ -42,14 +42,14 @@ const Navbar = () => {
       variants={fadeInDown}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="pt-6 lg:pt-6 mx-auto container "
+      className="pt-6 lg:pt-6 mx-auto max-w-7xl px-6"
     >
       <nav className="rounded-2xl p-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10 max-w-7xl  px-6 mx-auto
       relative">
         <div className=" mx-auto flex items-center relative">
           {/* Logo on the left */}
           <a href="/" className="mr-4">
-            <img src={Logo} alt="Logo" className="h-14 p-1 bg-cover mix-blend-multiply" />
+            <img src={Logo} alt="Logo" className="lg:h-12 md:h-11 sm:h-10 h-9 p-1 bg-cover " />
           </a>
 
           {/* Spacer to push rest to the right */}
