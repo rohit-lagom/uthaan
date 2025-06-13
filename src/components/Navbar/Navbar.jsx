@@ -42,7 +42,7 @@ const Navbar = () => {
       variants={fadeInDown}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="pt-6 lg:pt-6 mx-auto max-w-7xl px-6"
+      className="pt-4 lg:pt-4 mx-auto max-w-7xl px-6"
     >
       <nav className="rounded-2xl p-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10 
       relative">

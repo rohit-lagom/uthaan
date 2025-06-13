@@ -1,8 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ShieldCheck } from "lucide-react";
 import Navbar from "../Navbar/Navbar";
-import { HeroBG, Rating1, Rating2, Rating3, HeroBanner } from "../../assets/assets";
+
+import {
+  HeroBG,
+  Rating1,
+  Rating2,
+  Rating3,
+  HeroBanner,
+} from "../../assets/assets";
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -23,7 +31,7 @@ const Hero = () => {
     <div
       id="home"
       ref={ref}
-      className="relative w-full min-h-screen pb-20 transition-colors duration-300 overflow-hidden"
+      className="relative w-full min-h-screen pb-18 transition-colors duration-300 overflow-hidden"
     >
       {/* Background Image with Glass Blur */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -34,26 +42,31 @@ const Hero = () => {
         <div className="absolute inset-0 backdrop-blur-sm bg-black/10" />
       </div>
 
-      {/* Overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
       {/* Navbar */}
-      <div className="relative z-30 pt-4 lg:pt-6">
+      <div className="relative z-30 pt-4">
         <Navbar />
+      </div>
+
+      {/* Centered Badge */}
+      <div className="relative z-30 mt-8 flex justify-center">
+        <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-600 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow">
+          <ShieldCheck className="w-4 h-4" />
+          Blockchain Powered Agri Procurement
+        </div>
       </div>
 
       {/* Main Content */}
       <motion.div
-        className="relative z-20 max-w-7xl mx-auto px-6 pt-16 lg:pt-24 flex flex-col lg:flex-row items-center justify-between gap-10"
+        className="relative z-20 max-w-7xl mx-auto px-6 pt-6 md:pt-8 lg:pt-14 flex flex-col lg:flex-row items-center justify-between gap-10"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         {/* Left Section */}
-        <motion.div
-          className="w-full lg:w-1/2 text-white"
-          variants={fadeInUp}
-        >
+        <motion.div className="w-full lg:w-1/2 text-white" variants={fadeInUp}>
           <div className="space-y-8 max-w-xl mx-auto lg:mx-0">
             {/* Ratings */}
             <div className="flex justify-center lg:justify-start items-center gap-3">
@@ -63,7 +76,7 @@ const Hero = () => {
                     key={i}
                     src={img}
                     alt={`User ${i + 1}`}
-                    className="h-10 w-10 lg:h-12 lg:w-12 rounded-full border-2 border-white z-[i]"
+                    className="h-10 w-10 lg:h-12 lg:w-12 rounded-full border-2 border-white"
                   />
                 ))}
               </div>
@@ -82,7 +95,9 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg text-white/80 text-center lg:text-left">
-              A blockchain-powered procurement network that links farmers, PACS & NABARD on one tamper-proof ledger—unlocking higher rural incomes at the national scale.
+              A blockchain-powered procurement network that links farmers, PACS
+              & NABARD on one tamper-proof ledger—unlocking higher rural incomes
+              at the national scale.
             </p>
 
             {/* CTA Buttons */}
@@ -97,28 +112,24 @@ const Hero = () => {
           </div>
         </motion.div>
 
-{/* Right Section – Animated Image with Glowing Border and Rotating Blob BG */}
-<motion.div
-  className="w-full lg:w-1/2 flex justify-center relative"
-  animate={{ y: [0, -10, 0] }}
-  transition={{
-    duration: 4,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  <div className="relative w-full max-w-md md:max-w-lg lg:max-w-lg">
-
-
-    {/* Foreground Image */}
-    <img
-      src={HeroBanner}
-      alt="Hero Illustration"
-      className="relative z-10 w-full"
-    />
-  </div>
-</motion.div>
-
+        {/* Right Section */}
+        <motion.div
+          className="w-full lg:w-1/2  justify-center relative lg:flex hidden"
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <div className="relative w-full max-w-md md:max-w-lg lg:max-w-lg">
+            <img
+              src={HeroBanner}
+              alt="Hero Illustration"
+              className="relative z-10 w-full"
+            />
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
