@@ -11,6 +11,37 @@
 .marquee:hover {
   animation-play-state: paused;
 }
+@keyframes borderWalk {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.glowing-border {
+  position: relative;
+  border-radius: 1rem;
+  padding: 4px; /* Border thickness */
+  background: linear-gradient(270deg, #34d399, #10b981, #34d399);
+  background-size: 400% 400%;
+  animation: borderWalk 4s linear infinite;
+}
+
+.glowing-border::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background: inherit;
+  filter: blur(10px);
+  border-radius: inherit;
+}
+
 
  /* #000000
  #0000EE
