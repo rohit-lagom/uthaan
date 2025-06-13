@@ -129,7 +129,7 @@ const Navbar = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-emerald-00 hover:text-white transition-all shadow-lg "
+                className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-emerald-800 hover:text-white transition-all shadow-lg "
               >
                 Contact Us
               </a>
