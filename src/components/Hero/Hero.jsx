@@ -50,14 +50,14 @@ const Hero = () => {
         <Navbar />
       </div>
 
-   {/* Centered Badge with Motion */}
+      {/* Badge */}
 <motion.div
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-  className="relative z-30 mt-8 flex justify-center"
+  className="relative z-10 mt-8 flex justify-center"
 >
-  <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-600 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow">
+  <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-600 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-emerald-400/50 hover:shadow-lg">
     <ShieldCheck className="w-4 h-4" />
     Blockchain Powered Agri Procurement
   </div>
@@ -73,7 +73,7 @@ const Hero = () => {
       >
         {/* Left Section */}
         <motion.div className="w-full lg:w-1/2 text-white" variants={fadeInUp}>
-          <div className="space-y-8 max-w-xl mx-auto lg:mx-0">
+          <div className="space-y-6 sm:space-y-8 max-w-xl mx-auto lg:mx-0">
             {/* Ratings */}
             <div className="flex justify-center lg:justify-start items-center gap-3">
               <div className="flex -space-x-2">
@@ -87,41 +87,45 @@ const Hero = () => {
                 ))}
               </div>
               <div>
-                <div className="text-yellow-300">⭐⭐⭐⭐⭐</div>
-                <div className="text-white text-sm">From 2000+ ratings</div>
+                <div className="text-yellow-300 text-sm sm:text-base">
+                  ⭐⭐⭐⭐⭐
+                </div>
+                <div className="text-white text-xs sm:text-sm">
+                  From 2000+ ratings
+                </div>
               </div>
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-center lg:text-left">
               From Crop to Cooperative –{" "}
-              <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-300 font-bold to-green-300 bg-clip-text text-transparent">
                 Procurement, Perfected.
               </span>
             </h1>
 
-            <p className="text-lg text-white/80 text-center lg:text-left">
+            {/* Subtext */}
+            <p className="text-sm sm:text-base md:text-lg text-white/80 text-center lg:text-left">
               A blockchain-powered procurement network that links farmers, PACS
               & NABARD on one tamper-proof ledger—unlocking higher rural incomes
               at the national scale.
             </p>
 
             {/* CTA Buttons */}
- <div className="flex flex-col sm:flex-row gap-4 pt-4 md:pt-6 items-center lg:items-start justify-center lg:justify-start">
-  <button className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all shadow-md hover:shadow-lg cursor-pointer">
-    Request a Pilot Demo
-  </button>
-  <button className="bg-white/10 border border-white/20 text-emerald-300 hover:bg-white/20 backdrop-blur-md px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all cursor-pointer">
-    See How It Works
-  </button>
-</div>
-
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 md:pt-6 items-center lg:items-start justify-center lg:justify-start">
+              <button className="text-sm sm:text-base bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all shadow-md hover:shadow-lg cursor-pointer">
+                Request a Pilot Demo
+              </button>
+              <button className="text-sm sm:text-base bg-white/10 border border-white/20 text-emerald-300 hover:bg-white/20 backdrop-blur-md px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all cursor-pointer">
+                See How It Works
+              </button>
+            </div>
           </div>
         </motion.div>
 
         {/* Right Section */}
         <motion.div
-          className="w-full lg:w-1/2  justify-center relative lg:flex hidden"
+          className="w-full lg:w-1/2 justify-center relative lg:flex hidden"
           animate={{ y: [0, -10, 0] }}
           transition={{
             duration: 4,

@@ -111,7 +111,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 w-full md:hidden mt-6 z-50"
+            className="absolute top-full left-0 w-full md:hidden mt-6 z-100"
           >
             <div className="w-full mx-auto rounded-xl bg-white backdrop-blur-3xl shadow-lg p-6 flex flex-col gap-4 text-gray-700 border border-white/20 z-30 text-center">
               {navLinks.map((link) => (
@@ -129,7 +129,7 @@ const Navbar = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-white/20 hover:text-white transition-all shadow-lg"
+                className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-emerald-600 hover:text-white transition-all shadow-lg "
               >
                 Contact Us
               </a>
