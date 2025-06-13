@@ -44,7 +44,7 @@ const Navbar = () => {
       animate={inView ? "visible" : "hidden"}
       className="pt-6 lg:pt-6 mx-auto max-w-7xl px-6"
     >
-      <nav className="rounded-2xl p-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10 max-w-7xl  px-6 mx-auto
+      <nav className="rounded-2xl p-4 text-white shadow-xl z-50 bg-white/15 backdrop-blur-xs border border-white/10 
       relative">
         <div className=" mx-auto flex items-center relative">
           {/* Logo on the left */}
