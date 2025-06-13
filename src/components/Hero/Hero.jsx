@@ -51,18 +51,17 @@ const Hero = () => {
       </div>
 
       {/* Badge */}
-<motion.div
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-  className="relative z-10 mt-8 flex justify-center"
->
-  <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-600 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-emerald-400/50 hover:shadow-lg">
-    <ShieldCheck className="w-4 h-4" />
-    Blockchain Powered Agri Procurement
-  </div>
-</motion.div>
-
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        className="relative z-10 mt-8 flex justify-center"
+      >
+        <div className="inline-flex items-center gap-2 px-4 py-2 sm:text-sm text-xs font-semibold text-emerald-400 bg-white/20 backdrop-blur-md border border-emerald-500/30 rounded-full shadow transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-emerald-400/50 hover:shadow-lg">
+          <ShieldCheck className="w-4 h-4" />
+          Blockchain Powered Agri Procurement
+        </div>
+      </motion.div>
 
       {/* Main Content */}
       <motion.div
@@ -99,7 +98,7 @@ const Hero = () => {
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-center lg:text-left">
               From Crop to Cooperative –{" "}
-              <span className="bg-gradient-to-r from-emerald-300 font-bold to-green-300 bg-clip-text text-transparent">
+              <span className=" bg-gradient-to-br from-emerald-900 via-green-700 to-teal-800 bg-clip-text font-bold text-transparent ">
                 Procurement, Perfected.
               </span>
             </h1>
