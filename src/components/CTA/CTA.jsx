@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, ArrowRight, Phone, Mail } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Calendar, ArrowRight, Phone, Mail } from "lucide-react";
 
 const CTA = () => {
   return (
@@ -14,12 +14,15 @@ const CTA = () => {
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
-      
+
       <div className="container  max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -29,34 +32,34 @@ const CTA = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ready to make procurement{' '}
+            Ready to make procurement{" "}
             <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
               painless?
             </span>
           </h2>
-          
+
           <p className="text-xl md:text-2xl text-emerald-100/90 max-w-4xl mx-auto mb-8">
-            Book a 30-min strategy call and join the next set of PACS going live on the Cooperative Blockchain Procurement Network.
+            Book a 30-min strategy call and join the next set of PACS going live
+            on the Cooperative Blockchain Procurement Network.
           </p>
         </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+  className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-16"
+>
+  <button className="group bg-gradient-to-r from-emerald-500 to-green-500 text-white px-10 py-5 rounded-2xl text-xl font-semibold hover:from-emerald-400 hover:to-green-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-3 backdrop-blur-sm w-full sm:w-auto text-center justify-center">
+    <Calendar className="w-6 h-6" />
+    Book Strategy Call
+    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+  </button>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-        >
-          <button className="group bg-gradient-to-r from-emerald-500 to-green-500 text-white px-10 py-5 rounded-2xl text-xl font-semibold hover:from-emerald-400 hover:to-green-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-3 backdrop-blur-sm">
-            <Calendar className="w-6 h-6" />
-            Book Strategy Call
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </button>
-          
-          <button className="group text-white bg-white/10 backdrop-blur-xl border border-white/20 px-10 py-5 rounded-2xl text-xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-3xl">
-            Request Demo
-          </button>
-        </motion.div>
+  <button className="group text-white bg-white/10 backdrop-blur-xl border border-white/20 px-10 py-5 rounded-2xl text-xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-3xl w-full sm:w-auto text-center justify-center">
+    Request Demo
+  </button>
+</motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,14 +70,20 @@ const CTA = () => {
         >
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
             <Phone className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">Schedule a Call</h3>
-            <p className="text-emerald-100/80">Get personalized consultation for your PACS</p>
+            <h3 className="text-xl font-bold text-white mb-2">
+              Schedule a Call
+            </h3>
+            <p className="text-emerald-100/80">
+              Get personalized consultation for your PACS
+            </p>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
             <Mail className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-white mb-2">Get in Touch</h3>
-            <p className="text-emerald-100/80">Reach out for partnership opportunities</p>
+            <p className="text-emerald-100/80">
+              Reach out for partnership opportunities
+            </p>
           </div>
         </motion.div>
 
@@ -87,7 +96,9 @@ const CTA = () => {
         >
           <div className="inline-flex items-center gap-4 text-emerald-300/70">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-emerald-300/50" />
-            <span className="text-sm font-medium">Join the Agricultural Revolution</span>
+            <span className="text-sm font-medium">
+              Join the Agricultural Revolution
+            </span>
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-emerald-300/50" />
           </div>
         </motion.div>
