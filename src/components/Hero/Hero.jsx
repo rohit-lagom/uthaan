@@ -97,9 +97,9 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Section – Animated Image */}
+{/* Right Section – Animated Image with Glowing Border and Rotating Blob BG */}
 <motion.div
-  className="w-full lg:w-1/2 flex justify-center"
+  className="w-full lg:w-1/2 flex justify-center relative"
   animate={{ y: [0, -10, 0] }}
   transition={{
     duration: 4,
@@ -107,13 +107,17 @@ const Hero = () => {
     ease: "easeInOut",
   }}
 >
-  <img
-    src={HeroBanner}
-    alt="Hero Illustration"
-    className="w-full max-w-md md:max-w-lg lg:max-w-lg h-auto object-contain rounded-2xl"
-  />
-</motion.div>
+  <div className="relative w-full max-w-md md:max-w-lg lg:max-w-lg">
 
+
+    {/* Foreground Image */}
+    <img
+      src={HeroBanner}
+      alt="Hero Illustration"
+      className="relative z-10 w-full"
+    />
+  </div>
+</motion.div>
 
       </motion.div>
     </div>
