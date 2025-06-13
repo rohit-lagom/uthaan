@@ -63,7 +63,7 @@ const Blogs = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 container  max-w-7xl mx-auto px-6">
         <motion.div
           initial="hidden"
           animate={inView ? "visible" : "hidden"}

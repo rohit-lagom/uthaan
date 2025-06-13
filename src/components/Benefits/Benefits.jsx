@@ -101,7 +101,7 @@ const Benefits = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container  mx-auto px-4 md:px-6">
+      <div className="relative z-20 container   max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

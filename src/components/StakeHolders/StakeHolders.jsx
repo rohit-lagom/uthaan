@@ -66,7 +66,7 @@ const StakeholderWins = () => {
         <div className="absolute top-1/2 right-1/2 w-64 h-64 bg-teal-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container  max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

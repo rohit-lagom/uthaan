@@ -76,7 +76,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container mx-auto lg:px-6 relative z-10">
+      <div className="container  max-w-7xl mx-auto lg:px-6 relative z-10">
         <div className=" bg-white/60 backdrop-blur-xl border border-white/30 shadow-md rounded-3xl p-10 flex flex-col md:flex-row justify-between gap-12">
           {/* Logo and Description */}
           <div className="flex flex-col gap-8 max-w-sm">

@@ -72,7 +72,7 @@ const Hero = () => {
       >
         {/* Left Section */}
         <motion.div className="w-full lg:w-1/2 text-white" variants={fadeInUp}>
-          <div className="space-y-6 sm:space-y-8 max-w-xl mx-auto lg:mx-0">
+          <div className="space-y-6 sm:space-y-8 max-w-2xl mx-auto lg:mx-0">
             {/* Ratings */}
             <div className="flex justify-center lg:justify-start items-center gap-3">
               <div className="flex -space-x-2">
