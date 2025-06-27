@@ -6,10 +6,7 @@ import Navbar from "../Navbar/Navbar";
 
 import {
   HeroBG,
-  Rating1,
-  Rating2,
-  Rating3,
-  HeroBanner,
+  GreenLogo
 } from "../../assets/assets";
 
 const Hero = () => {
@@ -107,35 +104,15 @@ const Hero = () => {
         {/* Left */}
         <motion.div className="w-full lg:w-1/2 text-white" variants={containerVariants}>
           <div className="space-y-6 sm:space-y-8 max-w-2xl mx-auto lg:mx-0">
-            {/* Ratings */}
-            <motion.div className="flex justify-center lg:justify-start items-center gap-3" variants={itemVariants}>
-              <div className="flex -space-x-2">
-                {[Rating1, Rating2, Rating3].map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={`User ${i + 1}`}
-                    className="h-10 w-10 lg:h-12 lg:w-12 rounded-full border-2 border-white"
-                  />
-                ))}
-              </div>
-              <div>
-                <div className="text-yellow-300 text-sm sm:text-base">
-                  ⭐⭐⭐⭐⭐
-                </div>
-                <div className="text-white text-xs sm:text-sm">
-                  From 2000+ ratings
-                </div>
-              </div>
-            </motion.div>
+
 
             {/* Heading with typewriter effect */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-center lg:text-left"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-tight text-center lg:text-left"
               variants={itemVariants}
             >
               From Crop to Cooperative –{" "}
-              <span className="bg-gradient-to-br from-emerald-900 via-green-700 to-teal-800 bg-clip-text font-bold text-transparent">
+              <span className="bg-gradient-to-br from-emerald-800 font-extrabold via-green-500 to-teal-800  bg-clip-text  text-transparent">
                 {typedText}
                 <span className="inline-block w-[1px] h-6 bg-emerald-300 ml-1 animate-pulse" />
               </span>
@@ -178,7 +155,7 @@ const Hero = () => {
         >
           <div className="relative w-full max-w-md md:max-w-lg lg:max-w-lg">
             <img
-              src={HeroBanner}
+              src={GreenLogo}
               alt="Hero Illustration"
               className="relative z-10 w-full"
             />
