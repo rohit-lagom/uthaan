@@ -3,6 +3,9 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "../../assets/assets";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import {
+  HeroBG,
+} from "../../assets/assets";
 
 const navLinks = ["Home", "About", "Services", "Blog"];
 
@@ -103,39 +106,52 @@ const Navbar = () => {
           </div>
         </div>
 
-        {mobileMenuOpen && (
-          <motion.div
-            id="mobile-menu"
-            ref={menuRef}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 w-full md:hidden mt-6 z-100"
+{mobileMenuOpen && (
+  <motion.div
+    id="mobile-menu"
+    ref={menuRef}
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -10 }}
+    transition={{ duration: 0.3 }}
+    className="absolute top-full left-0 w-full md:hidden mt-2 z-40 border-white/20"
+  >
+    <div
+      className="relative w-full mx-auto rounded-xl p-6 flex flex-col gap-4 text-center text-white 
+        backdrop-blur-3xl bg-cover bg-center shadow-lg overflow-hidden"
+      style={{
+        backgroundImage: `url(${HeroBG})`,
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-md rounded-xl z-0 border border-white/20" />
+
+      {/* Menu content */}
+      <div className="relative z-10 flex flex-col gap-4">
+        {navLinks.map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase()}`}
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-base font-medium w-full relative group"
           >
-            <div className="w-full mx-auto rounded-xl bg-white backdrop-blur-3xl shadow-lg p-6 flex flex-col gap-4 text-gray-700 border border-white/20 z-30 text-center">
-              {navLinks.map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="text-base font-medium w-full relative group"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link}
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-white/10 border border-white/20 backdrop-blur-xl text-emerald-300 text-sm font-semibold rounded-xl hover:bg-emerald-800 hover:text-white transition-all shadow-lg "
-              >
-                Contact Us
-              </a>
-            </div>
-          </motion.div>
-        )}
+            <span className="relative z-10">{link}</span>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+          </a>
+        ))}
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 border border-white/20 bg-green-700/80 backdrop-blur-md text-sm font-semibold rounded-xl text-white hover:bg-emerald-800 transition-all shadow-lg"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </motion.div>
+)}
+
       </nav>
     </motion.div>
   );
