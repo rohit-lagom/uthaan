@@ -61,11 +61,13 @@ const Problem = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group"
             >
-              <div className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-3xl p-8 h-full hover:bg-white/80 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
-                <div className="bg-red-50/80 backdrop-blur-sm p-4 rounded-2xl w-fit mb-6 group-hover:bg-red-100/80 transition-colors">
-                  <problem.icon className="w-8 h-8 text-red-600" />
+              <div className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-3xl p-6 h-full hover:bg-white/80 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="bg-red-50/80 backdrop-blur-sm p-3 rounded-2xl group-hover:bg-red-100/80 transition-colors">
+                    <problem.icon className="w-7 h-7 text-red-600" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-slate-900">{problem.title}</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">{problem.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{problem.description}</p>
               </div>
             </motion.div>
