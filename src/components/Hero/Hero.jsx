@@ -112,7 +112,7 @@ const Hero = () => {
               variants={itemVariants}
             >
               From Crop to Cooperative{" "}
-              <span className="bg-gradient-to-br from-emerald-800 font-extrabold tracking-wider via-green-500 to-teal-800  bg-clip-text  text-transparent">
+              <span className="bg-gradient-to-br from-emerald-800 font-extrabold via-green-500 to-teal-800  bg-clip-text  text-transparent">
                 {typedText}
                 <span className="inline-block w-[1px] h-6 bg-emerald-300 ml-1 animate-pulse" />
               </span>
