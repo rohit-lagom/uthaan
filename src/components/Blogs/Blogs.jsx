@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Blog1, Blog2, Blog3 } from "../../assets/assets";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const blogPosts = [
   {
@@ -42,7 +46,7 @@ const Blogs = () => {
   return (
     <section
       ref={ref}
-      className="relative py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
+      className="relative py-10 md:py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
     >
       {/* Floating blobs */}
       <div className="absolute inset-0 overflow-hidden">
@@ -62,13 +66,12 @@ const Blogs = () => {
         />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container  max-w-7xl mx-auto px-6">
+      <div className="relative z-10 container max-w-7xl mx-auto px-6">
         <motion.div
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
             Stay Ahead of the{" "}
@@ -83,8 +86,48 @@ const Blogs = () => {
           </p>
         </motion.div>
 
-        {/* Blog cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Mobile Swiper */}
+        <div className="block md:hidden">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            pagination={{
+              clickable: true,
+              bulletClass:
+                "swiper-pagination-bullet bg-green-500 opacity-50",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active opacity-100",
+            }}
+            spaceBetween={16}
+            slidesPerView={1}
+            loop
+          >
+            {blogPosts.map((post, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-xl p-4 shadow-xl mb-10">
+                  <div className="aspect-[4/3] w-full mb-4 rounded-lg overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-sm text-gray-500 mb-2">{post.date}</div>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-slate-700">{post.description}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Margin above dots */}
+          <div className="mt-6" />
+        </div>
+
+        {/* Desktop Grid (Unchanged) */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
               key={index}
