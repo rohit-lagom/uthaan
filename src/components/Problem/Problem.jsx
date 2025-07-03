@@ -62,14 +62,18 @@ const Problem = () => {
               className="group"
             >
               <div className="bg-white/60 backdrop-blur-xl border border-white/20 md:rounded-3xl rounded-xl md:p-8 p-4 h-full hover:bg-white/80 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
-                <div className="flex md:block items-center md:items-start space-x-4 md:space-x-0 mb-4 md:mb-6">
-                  <div className="bg-red-50/80 backdrop-blur-sm md:p-4 p-2 md:rounded-2xl rounded-xl group-hover:bg-red-100/80 transition-colors">
-                    <problem.icon className="md:w-8 md:h-8 w-6 h-6 text-red-600" />
+                
+                {/* Icon + Heading */}
+                <div className="flex md:block items-center md:items-start gap-4 md:gap-0 mb-4 md:mb-6">
+                  <div className="bg-red-50/80 backdrop-blur-sm p-2 md:p-4 rounded-xl md:rounded-2xl group-hover:bg-red-100/80 transition-colors w-fit inline-flex">
+                    <problem.icon className="w-6 h-6 md:w-8 md:h-8 text-red-600" />
                   </div>
-                  <h3 className="md:text-2xl text-xl font-bold text-slate-900 md:mt-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 md:mt-4">
                     {problem.title}
                   </h3>
                 </div>
+
+                {/* Subheading */}
                 <p className="text-slate-600 leading-relaxed md:text-base text-sm">
                   {problem.description}
                 </p>
