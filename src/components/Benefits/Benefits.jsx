@@ -7,6 +7,10 @@ import {
   HiOutlineCash,
   HiOutlineGlobe,
 } from "react-icons/hi";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Benefits = () => {
   const [ref, inView] = useInView({
@@ -61,7 +65,7 @@ const Benefits = () => {
     <section
       id="benefits"
       ref={ref}
-      className="relative overflow-hidden py-20 md:py-28 scroll-mt-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 text-white"
+      className="relative overflow-hidden py-10 md:py-28 scroll-mt-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 text-white"
     >
       {/* Animated background glows */}
       <div className="absolute inset-0 overflow-hidden">
@@ -81,17 +85,20 @@ const Benefits = () => {
         />
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-20 container max-w-7xl mx-auto px-6 ">
+      {/* Section Header */}
+      <div className="relative z-20 container max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Built for <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">Everyone</span>
+            Built for{" "}
+            <span className="bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
+              Everyone
+            </span>
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Our platform creates value for all stakeholders in the agricultural
@@ -99,7 +106,64 @@ const Benefits = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Mobile Carousel */}
+        <div className="block md:hidden">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            pagination={{
+              clickable: true,
+              bulletClass:
+                "swiper-pagination-bullet bg-emerald-400 opacity-50",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active opacity-100",
+            }}
+            spaceBetween={16}
+            slidesPerView={1}
+            loop
+          >
+            {beneficiaries.map((beneficiary, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-4 flex flex-col items-start shadow-xl h-full mb-10">
+                  <div className="flex items-center gap-x-4 mb-4">
+                    <div className="min-w-[56px] h-14 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/20">
+                      {beneficiary.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">
+                      {beneficiary.title}
+                    </h3>
+                  </div>
+                  <ul className="space-y-3 text-white/80 text-sm">
+                    {beneficiary.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg
+                          className="w-5 h-5 text-emerald-300 mr-2 flex-shrink-0 mt-0.5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Margin above dots */}
+          <div className="mt-6" />
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {beneficiaries.map((beneficiary, index) => (
             <motion.div
               key={index}
@@ -114,7 +178,9 @@ const Benefits = () => {
                   <div className="min-w-[56px] h-14 flex items-center justify-center rounded-full bg-white/20 group-hover:bg-emerald-500/30 backdrop-blur-sm border border-white/20 transition-colors">
                     {beneficiary.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{beneficiary.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    {beneficiary.title}
+                  </h3>
                 </div>
                 <ul className="space-y-3 text-white/80 flex-grow">
                   {beneficiary.benefits.map((benefit, i) => (
