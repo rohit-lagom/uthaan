@@ -71,7 +71,7 @@ const PilotMetrics = () => {
           <div className="w-20 h-1 mx-auto bg-gradient-to-r from-emerald-500 to-green-500 rounded-full" />
         </motion.div>
 
-        {/* Mobile Version */}
+        {/* Mobile View */}
         <div className="space-y-6 md:hidden">
           {metrics.map((metric, index) => (
             <motion.div
@@ -80,39 +80,42 @@ const PilotMetrics = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-4 flex flex-col gap-3 shadow-xl"
+              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-4 shadow-xl flex gap-4 items-center"
             >
-              <div className="flex items-center gap-4">
-                <div className="bg-emerald-500/20 p-2 rounded-xl">
-                  <metric.icon className="w-6 h-6 text-emerald-300" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{metric.title}</h3>
+              {/* Left Icon */}
+              <div className="flex-shrink-0 bg-emerald-500/20 p-3 rounded-xl flex items-center justify-center">
+                <metric.icon className="w-6 h-6 text-emerald-300" />
               </div>
 
-              {metric.value && (
-                <div>
-                  <div className="text-2xl font-bold text-emerald-300">
-                    {metric.value}
-                  </div>
-                  <p className="text-gray-300 text-sm mt-1">{metric.description}</p>
-                </div>
-              )}
+              {/* Right Text */}
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
 
-              {metric.items && (
-                <ul className="space-y-2 text-sm text-gray-300">
-                  {metric.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="w-2 h-2 mt-2 bg-emerald-300 rounded-full flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {metric.value && (
+                  <div>
+                    <div className="text-2xl font-bold text-emerald-300">
+                      {metric.value}
+                    </div>
+                    <p className="text-gray-300 text-sm mt-1">{metric.description}</p>
+                  </div>
+                )}
+
+                {metric.items && (
+                  <ul className="space-y-2 text-sm text-gray-300 mt-2">
+                    {metric.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="w-2 h-2 mt-2 bg-emerald-300 rounded-full flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Desktop Version (unchanged) */}
+        {/* Desktop View (unchanged) */}
         <div className="hidden md:grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           {metrics.map((metric, index) => (
             <motion.div
