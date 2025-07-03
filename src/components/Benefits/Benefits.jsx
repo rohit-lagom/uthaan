@@ -65,7 +65,7 @@ const Benefits = () => {
     <section
       id="benefits"
       ref={ref}
-      className="relative overflow-hidden py-10 md:py-28 scroll-mt-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 text-white"
+      className="relative overflow-hidden py-10 md:py-20 scroll-mt-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 text-white"
     >
       {/* Animated background glows */}
       <div className="absolute inset-0 overflow-hidden">

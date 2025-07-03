@@ -60,7 +60,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className="relative py-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 overflow-hidden"
+      className="relative py-10 md:py-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 overflow-hidden"
       ref={ref}
     >
       <motion.div

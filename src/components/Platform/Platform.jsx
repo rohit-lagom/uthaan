@@ -155,7 +155,7 @@ const Platform = () => {
         </motion.div>
 
         <motion.div
-          className="mt-14 text-center"
+          className="md:mt-14 mt-6 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

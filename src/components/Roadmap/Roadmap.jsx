@@ -61,20 +61,20 @@ const Roadmap = () => {
   };
 
   return (
-    <section className="py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 overflow-x-hidden">
+    <section className="py-10 md:py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 overflow-x-hidden">
       {/* Floating blobs */}
       <div className="absolute inset-0 overflow-x-hidden overflow-y-visible pointer-events-none z-0">
         <div className="absolute top-1/4 right-1/3 w-64 md:w-80 h-64 md:h-80 bg-green-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
         <div className="absolute bottom-1/3 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-emerald-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
       </div>
 
-      <div className="container  max-w-7xl  mx-auto px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
             Road to{" "}
@@ -114,28 +114,29 @@ const Roadmap = () => {
 
                   <div className={`lg:w-1/2 ${isEven ? "lg:pr-12" : "lg:pl-12"}`}>
                     <div
-                      className={`bg-white/60 backdrop-blur-xl border ${colors.border} rounded-3xl p-8 group hover:bg-white/80 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl`}
+                      className={`bg-white/60 backdrop-blur-xl border ${colors.border} rounded-xl md:rounded-3xl p-4 md:p-8 group hover:bg-white/80 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl`}
                     >
-                      <div className="flex items-start gap-6">
-                        <div
-                          className={`${colors.bg} backdrop-blur-sm p-4 rounded-2xl flex-shrink-0`}
-                        >
-                          <phase.icon className={`w-8 h-8 ${colors.text}`} />
-                        </div>
-
-                        <div className="flex-1">
-                          <div
-                            className={`text-sm font-medium ${colors.text} mb-2`}
-                          >
+                      {/* Mobile-first Layout */}
+                      <div className="space-y-4">
+                        {/* Icon + Phase */}
+                        <div className="flex items-center gap-4">
+                          <div className={`${colors.bg} backdrop-blur-sm p-3 md:p-4 rounded-xl md:rounded-2xl flex-shrink-0`}>
+                            <phase.icon className={`w-6 h-6 md:w-8 md:h-8 ${colors.text}`} />
+                          </div>
+                          <div className={`text-sm md:text-base font-medium ${colors.text}`}>
                             {phase.phase}
                           </div>
-                          <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                            {phase.title}
-                          </h3>
-                          <p className="text-slate-600 leading-relaxed">
-                            {phase.description}
-                          </p>
                         </div>
+
+                        {/* Phase Name */}
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-900">
+                          {phase.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                          {phase.description}
+                        </p>
                       </div>
                     </div>
                   </div>
