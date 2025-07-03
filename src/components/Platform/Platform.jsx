@@ -162,7 +162,7 @@ const Platform = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a
-            href="#benefits"
+            href="#services"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-emerald-600 hover:bg-emerald-500 transition duration-200"
           >
             Learn More About the Platform

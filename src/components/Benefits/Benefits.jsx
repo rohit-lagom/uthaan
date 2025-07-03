@@ -63,7 +63,7 @@ const Benefits = () => {
 
   return (
     <section
-      id="benefits"
+      id="services"
       ref={ref}
       className="relative overflow-hidden py-10 md:py-20 scroll-mt-20 bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 text-white"
     >

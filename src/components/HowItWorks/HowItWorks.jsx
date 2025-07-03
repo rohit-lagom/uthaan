@@ -31,7 +31,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-10 md:py-20 relative bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900">
+    <section 
+    id='HowItWorks'
+    className="py-10 md:py-20 relative bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />

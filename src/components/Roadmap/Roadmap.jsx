@@ -61,7 +61,9 @@ const Roadmap = () => {
   };
 
   return (
-    <section className="py-10 md:py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 overflow-x-hidden">
+    <section 
+    id="roadmap"
+    className="py-10 md:py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 overflow-x-hidden">
       {/* Floating blobs */}
       <div className="absolute inset-0 overflow-x-hidden overflow-y-visible pointer-events-none z-0">
         <div className="absolute top-1/4 right-1/3 w-64 md:w-80 h-64 md:h-80 bg-green-200/20 rounded-full mix-blend-multiply filter blur-3xl" />

@@ -129,17 +129,23 @@ const Hero = () => {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 md:pt-6 items-center lg:items-start justify-center lg:justify-start"
-              variants={itemVariants}
-            >
-              <button className="text-sm sm:text-base bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all shadow-md hover:shadow-lg cursor-pointer">
-                Request a Pilot Demo
-              </button>
-              <button className="text-sm sm:text-base bg-white/10 border border-white/20 text-emerald-300 hover:bg-white/20 backdrop-blur-md px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all cursor-pointer">
-                See How It Works
-              </button>
-            </motion.div>
+{/* CTA Buttons */}
+<motion.div
+  className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 md:pt-6 items-center lg:items-start justify-center lg:justify-start"
+  variants={itemVariants}
+>
+  <a href="#contact" className="w-full sm:w-auto text-center">
+    <button className="text-sm sm:text-base bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-600 hover:to-green-600 text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all shadow-md hover:shadow-lg cursor-pointer">
+      Request a Pilot Demo
+    </button>
+  </a>
+  <a href="#howitworks" className="w-full sm:w-auto text-center">
+    <button className="text-sm sm:text-base bg-white/10 border border-white/20 text-emerald-300 hover:bg-white/20 backdrop-blur-md px-6 py-3 rounded-md font-semibold w-full sm:w-auto transition-all cursor-pointer">
+      See How It Works
+    </button>
+  </a>
+</motion.div>
+
           </div>
         </motion.div>
 

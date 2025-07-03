@@ -46,6 +46,7 @@ const Blogs = () => {
   return (
     <section
       ref={ref}
+      id="blogs"
       className="relative py-10 md:py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
     >
       {/* Floating blobs */}
