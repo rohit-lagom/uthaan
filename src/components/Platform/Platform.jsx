@@ -11,18 +11,13 @@ import {
 } from "react-icons/hi";
 
 const Platform = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -37,34 +32,34 @@ const Platform = () => {
 
   const platformModules = [
     {
-      icon: <HiOutlineCurrencyDollar className="w-10 h-10 text-green-700" />,
+      icon: <HiOutlineCurrencyDollar className="w-8 h-8 text-green-700" />,
       title: "Token Layer",
       description:
         "Crop yields, carbon credits, land, machinery as digital assets",
     },
     {
-      icon: <HiOutlineUserGroup className="w-10 h-10 text-green-700" />,
+      icon: <HiOutlineUserGroup className="w-8 h-8 text-green-700" />,
       title: "DAO Governance",
       description:
         "Mobile voting app, treasury control, on-chain decision making",
     },
     {
-      icon: <HiOutlineShoppingCart className="w-10 h-10 text-green-700" />,
+      icon: <HiOutlineShoppingCart className="w-8 h-8 text-green-700" />,
       title: "Smart Marketplace",
       description: "P2P crop trading, escrow-based payments",
     },
     {
-      icon: <HiOutlineGlobe className="w-10 h-10 text-green-700" />,
+      icon: <HiOutlineGlobe className="w-8 h-8 text-green-700" />,
       title: "CSR & ESG Gateway",
       description: 'Milestone-based "Impact Wallets" for corporates',
     },
     {
-      icon: <HiOutlineLightningBolt className="w-10 h-10 text-green-700" />,
+      icon: <HiOutlineLightningBolt className="w-8 h-8 text-green-700" />,
       title: "Impact Oracle",
       description: "Verified data via satellite, soil sensors, and IoT",
     },
     {
-      icon: <HiOutlineIdentification className="w-10 h-10 text-green-700" />,
+      icon: <HiOutlineIdentification className="w-8 h-8 text-green-700" />,
       title: "Agri Identity Hub",
       description:
         "Unified digital identity for farmers, PACS & cooperatives to access services securely",
@@ -75,7 +70,7 @@ const Platform = () => {
     <motion.section
       id="platform"
       ref={ref}
-      className="py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
+      className="py-10 md:py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -87,12 +82,12 @@ const Platform = () => {
         <div className="absolute top-1/2 right-1/2 w-64 h-64 bg-teal-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
       </div>
 
-      <div className="container max-w-7xl mx-auto px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <motion.h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
             One Platform.{" "}
@@ -112,11 +107,35 @@ const Platform = () => {
           </motion.p>
         </motion.div>
 
+        {/* Mobile View */}
+        <div className="space-y-4 md:hidden">
+          {platformModules.map((module, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-xl p-4 flex flex-col space-y-2 shadow-xl"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="bg-green-100/80 p-3 rounded-xl">
+                  {module.icon}
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">
+                  {module.title}
+                </h3>
+              </div>
+              <p className="text-slate-600 text-sm">
+                {module.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Desktop View (unchanged) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {platformModules.map((module, index) => (
             <motion.div
