@@ -64,7 +64,7 @@ const Testimonials = () => {
       ref={ref}
     >
       <motion.div
-        className="relative container  max-w-7xl mx-auto px-6 text-center mb-12"
+        className="relative container max-w-7xl mx-auto px-6 text-center mb-12"
         variants={fadeInUp}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -82,19 +82,19 @@ const Testimonials = () => {
         </p>
       </motion.div>
 
-      <div className="container  max-w-7xl mx-auto px-6 relative overflow-hidden group">
+      <div className="container max-w-7xl mx-auto px-6 relative overflow-hidden group">
         <div className="flex gap-6 py-5 my-5 w-max [animation:marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div
               key={i}
-              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 w-72 sm:w-80 h-80 hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-xl hover:shadow-2xl flex-shrink-0"
+              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl md:rounded-3xl p-4 md:p-6 w-64 sm:w-72 md:w-80 min-h-[20rem] md:h-80 hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-xl hover:shadow-2xl flex-shrink-0"
               variants={fadeInUp}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               custom={(i % testimonials.length) + 1}
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden border border-white/30">
+              <div className="flex items-center gap-3 md:gap-4 mb-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border border-white/30">
                   <img
                     src={t.image}
                     alt={t.name}
@@ -102,12 +102,16 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-white">{t.name}</div>
-                  <div className="text-white/80 text-sm">{t.platform}</div>
+                  <div className="font-semibold text-white text-sm md:text-base">
+                    {t.name}
+                  </div>
+                  <div className="text-white/80 text-xs md:text-sm">
+                    {t.platform}
+                  </div>
                 </div>
               </div>
-              <p className="text-white/90 mb-4">{t.text}</p>
-              <div className="text-yellow-300 text-lg">
+              <p className="text-white/90 text-sm md:text-base mb-4">{t.text}</p>
+              <div className="text-yellow-300 text-base md:text-lg">
                 {"⭐".repeat(t.rating)}
               </div>
             </motion.div>

@@ -23,7 +23,7 @@ const CTA = () => {
         />
       </div>
 
-      <div className="container  max-w-7xl mx-auto px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,50 +38,53 @@ const CTA = () => {
             </span>
           </h2>
 
-          <p className="text-xl md:text-2xl text-emerald-100/90 max-w-4xl mx-auto mb-8">
+          <p className="text-lg md:text-2xl text-emerald-100/90 max-w-4xl mx-auto mb-8">
             Book a 30-min strategy call and join the next set of PACS going live
             on the Cooperative Blockchain Procurement Network.
           </p>
         </motion.div>
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-16"
->
-  <button className="group bg-gradient-to-r from-emerald-500 to-green-500 text-white px-10 py-5 rounded-2xl text-xl font-semibold hover:from-emerald-400 hover:to-green-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-3 backdrop-blur-sm w-full sm:w-auto text-center justify-center">
-    <Calendar className="w-6 h-6" />
-    Book Strategy Call
-    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-  </button>
 
-  <button className="group text-white bg-white/10 backdrop-blur-xl border border-white/20 px-10 py-5 rounded-2xl text-xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-3xl w-full sm:w-auto text-center justify-center">
-    Request Demo
-  </button>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-16"
+        >
+          <button className="group bg-gradient-to-r from-emerald-500 to-green-500 text-white px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl font-semibold hover:from-emerald-400 hover:to-green-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-3 backdrop-blur-sm w-full sm:w-auto text-center justify-center">
+            <Calendar className="w-6 h-6" />
+            Book Strategy Call
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </button>
+
+          <button className="group text-white bg-white/10 backdrop-blur-xl border border-white/20 px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-3xl w-full sm:w-auto text-center justify-center">
+            Request Demo
+          </button>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto"
         >
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl md:rounded-3xl p-4 md:p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
             <Phone className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">
+            <h3 className="text-lg md:text-xl font-bold text-white mb-2">
               Schedule a Call
             </h3>
-            <p className="text-emerald-100/80">
+            <p className="text-emerald-100/80 text-sm md:text-base">
               Get personalized consultation for your PACS
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl md:rounded-3xl p-4 md:p-8 text-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-2xl hover:shadow-3xl">
             <Mail className="w-8 h-8 text-emerald-300 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-white mb-2">Get in Touch</h3>
-            <p className="text-emerald-100/80">
+            <h3 className="text-lg md:text-xl font-bold text-white mb-2">
+              Get in Touch
+            </h3>
+            <p className="text-emerald-100/80 text-sm md:text-base">
               Reach out for partnership opportunities
             </p>
           </div>
