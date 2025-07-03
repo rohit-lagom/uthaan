@@ -1,3 +1,4 @@
+import React from "react";
 import {
   LogoFooter,
   Facebook,
@@ -11,49 +12,32 @@ const footerLinks = [
     title: "Company",
     links: [
       { label: "Home", url: "#home" },
-      { label: "About Us", url: "#about" },
-      { label: "Contact", url: "#contact" },
+      { label: "Solutions", url: "#solutions" },
+      { label: "Platform", url: "#platform" },
     ],
   },
   {
-    title: "Other pages",
+    title: "Resources",
     links: [
       { label: "Services", url: "#services" },
-      { label: "Blog", url: "#blog" },
-      { label: "404", url: "/404" },
+      { label: "Roadmap", url: "#roadmap" },
+      { label: "Blogs", url: "#blogs" },
     ],
   },
   {
-    title: "Services",
+    title: "Contact",
     links: [
-      { label: "Landscaping works", url: "#landscaping" },
-      { label: "Irrigation systems", url: "#irrigation" },
-      { label: "Garden design", url: "#design" },
+      { label: "Contact Us", url: "#contact" },
+      { label: "Support", url: "#contact" },
     ],
   },
 ];
 
 const socialIcons = [
-  {
-    icon: Facebook,
-    alt: "Facebook",
-    url: "#",
-  },
-  {
-    icon: Twitter,
-    alt: "Twitter",
-    url: "#",
-  },
-  {
-    icon: Instagram,
-    alt: "Instagram",
-    url: "#",
-  },
-  {
-    icon: Youtube,
-    alt: "YouTube",
-    url: "#",
-  },
+  { icon: Facebook, alt: "Facebook", url: "#" },
+  { icon: Twitter, alt: "Twitter", url: "#" },
+  { icon: Instagram, alt: "Instagram", url: "#" },
+  { icon: Youtube, alt: "YouTube", url: "#" },
 ];
 
 const Footer = () => {
@@ -85,7 +69,7 @@ const Footer = () => {
             </a>
             <p className="text-slate-700 text-sm md:text-base leading-relaxed">
               Unleash the full potential of your{" "}
-              <span className="lg:block sm:inline">outdoor space.</span>
+              <span className="lg:block sm:inline">agriculture network.</span>
             </p>
             <div className="flex gap-5 mt-2">
               {socialIcons.map(({ icon, alt, url }) => (
@@ -99,7 +83,7 @@ const Footer = () => {
                   <img
                     src={icon}
                     alt={`${alt} Icon`}
-                    className="w-5 h-5 hover:scale-110 transition-transform"
+                    className="w-5 h-5 hover:scale-110 transition-transform cursor-pointer"
                   />
                 </a>
               ))}
@@ -118,7 +102,7 @@ const Footer = () => {
                     <li key={label}>
                       <a
                         href={url}
-                        className="text-slate-700 hover:text-emerald-600 transition-colors text-sm md:text-base"
+                        className="text-slate-700 hover:text-emerald-600 transition-colors text-sm md:text-base cursor-pointer"
                       >
                         {label}
                       </a>
