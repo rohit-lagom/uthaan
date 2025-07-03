@@ -76,14 +76,14 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container  max-w-7xl mx-auto lg:px-6 relative z-10">
-        <div className=" bg-white/60 backdrop-blur-xl border border-white/90 shadow-2xl rounded-3xl p-10 flex flex-col md:flex-row justify-between gap-12">
+      <div className="container max-w-7xl mx-auto lg:px-6 relative z-10">
+        <div className="bg-white/60 backdrop-blur-xl border border-white/90 shadow-2xl rounded-2xl md:rounded-3xl p-6 md:p-10 flex flex-col md:flex-row justify-between gap-8 md:gap-12">
           {/* Logo and Description */}
-          <div className="flex flex-col gap-8 max-w-sm">
+          <div className="flex flex-col gap-6 max-w-sm">
             <a href="/" aria-label="Home">
               <img src={LogoFooter} alt="Uthaan Logo" className="w-40" />
             </a>
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
               Unleash the full potential of your{" "}
               <span className="lg:block sm:inline">outdoor space.</span>
             </p>
@@ -107,18 +107,18 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 flex-grow">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {footerLinks.map(({ title, links }) => (
               <div key={title}>
-                <h4 className="mb-6 font-semibold text-xl text-slate-900">
+                <h4 className="mb-4 md:mb-6 font-semibold text-lg md:text-xl text-slate-900">
                   {title}
                 </h4>
-                <ul className="space-y-4">
+                <ul className="space-y-3 md:space-y-4">
                   {links.map(({ label, url }) => (
                     <li key={label}>
                       <a
                         href={url}
-                        className="text-slate-700 hover:text-emerald-600 transition-colors"
+                        className="text-slate-700 hover:text-emerald-600 transition-colors text-sm md:text-base"
                       >
                         {label}
                       </a>
