@@ -24,7 +24,7 @@ const PolicyFit = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <section className="py-10 md:py-20 relative bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-green-200/20 rounded-full mix-blend-multiply filter blur-3xl" />
@@ -39,13 +39,13 @@ const PolicyFit = () => {
         }} />
       </div>
 
-      <div className="container  max-w-7xl mx-auto px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Policy</span> Fit
@@ -53,7 +53,7 @@ const PolicyFit = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {policies.map((policy, index) => (
             <motion.div
               key={index}
@@ -63,22 +63,34 @@ const PolicyFit = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group"
             >
-              <div className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-3xl p-8 h-full hover:bg-white/80 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl">
-                <div className="bg-green-100/80 backdrop-blur-sm p-4 rounded-2xl w-fit mb-6 group-hover:bg-green-200/80 transition-colors">
-                  <policy.icon className="w-8 h-8 text-green-600" />
+              <div className="bg-white/60 backdrop-blur-xl border border-white/20 rounded-xl md:rounded-3xl p-4 md:p-8 h-full hover:bg-white/80 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                
+                {/* Mobile: Left Icon - Right Heading */}
+                <div className="flex items-center md:block gap-4 md:gap-0 mb-4 md:mb-6">
+                  <div className="bg-green-100/80 backdrop-blur-sm p-2 md:p-4 rounded-xl md:rounded-2xl w-fit inline-flex group-hover:bg-green-200/80 transition-colors">
+                    <policy.icon className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900">
+                    {policy.title}
+                  </h3>
                 </div>
-                
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">{policy.title}</h3>
-                
+
+                {/* Amount or Farmers */}
                 {policy.amount && (
-                  <div className="text-3xl font-bold text-green-600 mb-4">{policy.amount}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-green-600 mb-3 md:mb-4">
+                    {policy.amount}
+                  </div>
                 )}
-                
                 {policy.farmers && (
-                  <div className="text-2xl font-bold text-green-600 mb-4">{policy.farmers}</div>
+                  <div className="text-xl md:text-2xl font-bold text-green-600 mb-3 md:mb-4">
+                    {policy.farmers}
+                  </div>
                 )}
-                
-                <p className="text-slate-600 leading-relaxed">{policy.description}</p>
+
+                {/* Description */}
+                <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                  {policy.description}
+                </p>
               </div>
             </motion.div>
           ))}
